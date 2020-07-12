@@ -94,7 +94,7 @@ def mergeKLists(self, lists: List[ListNode]) -> ListNode:
 ```
 
 
-33. Search in a Rotated Sorted Array
+## 33. Search in a Rotated Sorted Array
 
 Given a sorted array of integers rotated around a pivot and a target num, find the index of the target num.
 
@@ -126,7 +126,7 @@ def search(self, nums, target):
     return -1
 ```
 
-53. Maximum Subarray
+## 53. Maximum Subarray
 
 Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
 
@@ -141,7 +141,7 @@ def maxSubArray(self, nums):
     return max(nums)
 ```
 
-70. Climbing Stairs
+## 70. Climbing Stairs
 
 There are two ways to reach the ith step, (1) by taking 2 steps from step ith-2 (2) by taking 1 step from step ith-1. Therefore by adding them we get the possibilities for reaching the ith step.
 
@@ -155,7 +155,7 @@ def climingStairs(n):
     return stairs[n-1]
 ```
 
-100. Same Tree
+## 100. Same Tree
 
 https://leetcode.com/problems/same-tree/solution/
 
@@ -173,7 +173,7 @@ def isSameTree(self, root):
            self.isSameTree(p.left, q.left)    
 ```
 
-104. Maximum Depth of a Binary Tree
+## 104. Maximum Depth of a Binary Tree
 
 https://leetcode.com/problems/maximum-depth-of-binary-tree/
 
@@ -185,7 +185,7 @@ def maxDepth(self, root):
 ```
 
 
-121. Best Time to Buy and Sell Stock
+## 121. Best Time to Buy and Sell Stock
 
 Given an array of stock prices on given days, with only one transaction on a single day, determine best price to first buy and sell a stock and return the max profit.
 
@@ -203,7 +203,7 @@ def maxProfit(self, prices):
     return max_profit
 ```
 
-152. Maximum Product Subarray
+## 152. Maximum Product Subarray
 
 Given an integer array nums, find the contiguous subarray within an array (containing at least one number) which has the largest product.
 
@@ -225,7 +225,7 @@ Say, we have a subarray A[i : j](i != 0, j != n) and the product of elements ins
 What if there are zeroes in the array? Well, we can split the array into several smaller ones. That's to say, when the prefix product is 0, we start over and compute prefix product from the current element instead. And this is exactly what A[i] *= (A[i - 1]) or 1 does.
 
 
-153. Find Minimum in Rotated Sorted Array
+## 153. Find Minimum in Rotated Sorted Array
 
 Suppose an array of integers is sorted and rotated around a pivot. Find the minimum.
 
@@ -250,7 +250,7 @@ def findMin(self, nums):
 The main idea is to converge the left and right bounds to the minimum value regardless of pivot. If there is a larger number at the mid we know that the array is rotated to have the minimum to the right of it, and if it is smaller than the rightest element we know we are cycling through the rotated part but we don't know that the number is the minimum. We need to wait for the loop to converge to right which will be the minimum.
 
 
-190. Reverse Bits
+## 190. Reverse Bits
 
 Pop off least siginficant bit and right shift it.
 
@@ -262,7 +262,7 @@ def reverseBits(n):
         n >>= 1
 ```
 
-191. Number of 1 Bits
+## 191. Number of 1 Bits
 
 Pop the least significant bit and count until 0.
 
@@ -276,7 +276,7 @@ def hammingWeight(n):
 ```
 
 
-217. Contains Duplicate
+## 217. Contains Duplicate
 
 Given array of integers, find if array has duplicates.
 
@@ -288,7 +288,7 @@ def containsDuplicate(self, nums):
     return len(nums) != len(set(nums))
 ```
 
-226. Invert Binary Tree
+## 226. Invert Binary Tree
 
 https://leetcode.com/problems/invert-binary-tree/solution/
 
@@ -302,7 +302,7 @@ def invertTree(self, root):
 ```
 
 
-238. Product of Array Except Self
+## 238. Product of Array Except Self
 
 Given an array of ints, return the product of the array except the element for each element as an array.
 
@@ -325,7 +325,7 @@ def productExceptSelf(self, nums):
     return output
 ```
 
-268. Missing Number
+## 268. Missing Number
 
 XOR can be used to eliminate pairs of the index XOR number since there is a constant distribution. Binary search can be used in a sorted array. Or the sum in O(n).
 
@@ -344,13 +344,13 @@ def missingNumber(nums):
 ```
 
 
-295. Find the Median From Data Stream
+## 295. Find the Median From Data Stream
 
 https://leetcode.com/problems/find-median-from-data-stream/
 
 Simple sorting will be an O(nlogn) solution. Sort every time. Maintaining two heaps - one max and one min heap where each is maintained with equal sizes within 2 is the key to this problem.
 
-322. Coin Change
+## 322. Coin Change
 
 This problem can be broken down into subtracting a single coin from the current amount value and checking if the subtracted amount has a number of times associated with it for all the coins in the bank.
 
@@ -358,7 +358,7 @@ This problem can be broken down into subtracting a single coin from the current 
 def
 ```
 
-347. Top K Frequent Elements
+## 347. Top K Frequent Elements
 
 Given a non-empty array of integers, return the k most frequent elements.
 
@@ -366,7 +366,7 @@ https://leetcode.com/problems/top-k-frequent-elements/solution/
 
 Using bucket sort we can maintain an array where the frequency is the index. Make a hashmap with the frequencies and add them to an array. This will take O(N). Using the bucket array we can return the top K values where K will always be less than N because the frequency can be no larger than the number of integers.
 
-338. Counting Bits
+## 338. Counting Bits
 
 Bit manipulation through single level DP. A number that is even can be turned into an odd number through a right shift by 1 and a number that is odd has the name number of bits as the previous number + 1.
 
@@ -383,7 +383,7 @@ def countBits(n):
 ```
 
 
-342. Is Power Of Four
+## 342. Is Power Of Four
 
 Powers of four in binary have a few characteristics: (1) greater than 0 (2) only have one 1 bit in their binary notation (3)) the 1 bit should be at an odd location.
 
@@ -410,9 +410,6 @@ def getSum(a, b):
         b = c<<1 #reassign carry
     return a
 ```
-
-
-
 
 # Project Euler
 
