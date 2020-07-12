@@ -2,7 +2,7 @@
 
 # Leetcode
 
-1. Two Sum
+## 1. Two Sum
 
 Given an array of ints, return indices of two numbers such that they add to the target number.
 
