@@ -21,7 +21,7 @@ def twoSum(self, nums, target):
 ```
 
 
-11. Container With Most Water
+## 11. Container With Most Water
 
 Brute Force - O(n^2). Find all containers and their volume.
 Ideal - Start with the widest container, the container with the first and last lines. We cannot increase the width of this container to increase the volume therefore we need to increase the height. Removing the larger height candidate will not increase the height so we remove and move the smaller height candidate (either the left or right most).
@@ -40,7 +40,7 @@ def maxArea(self, height):
     return water
 ```
 
-15. 3-Sum
+## 15. 3-Sum
 
 Brute force - O(n^3). Loop through each triplet.
 Ideal - Sort the array, then, for each element we neeed to find the matching 2 other targets that complete the triplet. Have a left and right pointer to the ends of the rest of the array. We know that if the sum of the two-target is higher than necessary, we move the right pointer down and vice versa the left pointer up. O(n^2)
@@ -69,7 +69,7 @@ def threeSum(self, nums):
     return res
 ```
 
-23. Merge K Sorted Lists
+## 23. Merge K Sorted Lists
 
 Using a heap you can add an element from every sorted list into the heap along with it's list and pop them off in order. This can organize the sorted lists in O(m*n*log(n)) where m is the number of lists and n is the total number of ListNodes.
 
@@ -397,7 +397,7 @@ def isPowerOfFour(n):
 
 ```
 
-371. Sum of Two Integers Without '+'
+## 371. Sum of Two Integers Without '+'
 
 Add the two numbers with the XOR operator. However in Binary this will take 1+1 and instead of 0 with a carry it will just be 0. We need to account for the carry with the & operator. The carry gets added to the next number so we keep adding until it becomes 0.
 
@@ -416,10 +416,49 @@ def getSum(a, b):
 
 # Project Euler
 
-1. Multiples of 3 and 5
+## 1. Multiples of 3 and 5
 
 ```
 def multiples(self):
     return sum([x for x in range(1000) if ((x % 5 == 0) or (x % 3 == 0))])
 ```
 
+## 2. Even Fibonacci Numbers
+
+```
+def even_fib(n):
+    sum = 0
+    i, j = 0, 1
+    while i < n:
+        if i % 2 == 0:
+            sum += i
+        i, j = j, i+j
+    return sum
+```
+
+## 3. Largest Prime Factor
+
+```
+def largest_prime_factor(n):
+    i = 2
+    while i < n:
+        if n % i == 0 and n / i > 1:
+            n = n / i
+            i = 2
+        else:
+            i = i + 1
+    return n 
+```
+
+## 4. Largest Palindrome Product
+
+```
+def largest_palindrome_product():
+    palindromes = []
+    numbers = [a * b for a in range(100,999) for b in range(100, 999)]
+    for num in numbers:
+        potential_palindrome = str(num)
+        if potential_palindrome = potential_palindrome[::-1]:
+            palindromes.append(num)
+    return palindromes[-1]
+```
