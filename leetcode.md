@@ -94,6 +94,25 @@ def letter_combinations(digits):
     return all_combinations
 ```
 
+## 21. [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)
+
+Loop through the lists iteratively, verifying their values and incrementing them forwards respectively. Weave them together.
+
+```
+def merge_two_sorted_lists(l1, l2):
+    dummy = cur = ListNode(0)
+    while l1 and l2:
+        if l1.val < l2.val:
+            cur.next = l1
+            l1 = l1.next
+        else:
+            cur.next = l2
+            l2 = l2.next
+        cur = cur.next
+    cur.next = l1 or l2
+    return dummy.next
+```
+
 ## 23. Merge K Sorted Lists
 
 Using a heap you can add an element from every sorted list into the heap along with it's list and pop them off in order. This can organize the sorted lists in O(m*n*log(n)) where m is the number of lists and n is the total number of ListNodes.
@@ -634,6 +653,15 @@ def missingNumber(nums):
     return (len(nums)*(len(nums) + 1)/2) - sum(nums)
 ```
 
+## 283. [Move Zeroes](https://leetcode.com/problems/move-zeroes/)
+
+```
+def move_zeroes(nums):
+    zeroes = nums.count(0)
+    nums[:] = [i for i in nums if i != 0]
+    nums += [0] * zeroes
+```
+
 ## 284. Peeking Iterator
 
 ```
@@ -737,6 +765,18 @@ def find_anagrams(s, p):
     return res
 ```
 
+
+## 448. [Find All Numbers Disappeared in an Array](https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/)
+
+```
+def find_disappeared_numbers(nums):
+    nums = [0] + nums
+    for i in range(len(nums)):
+        index = abs(nums[i])
+        nums[index] = -abs(nums[index])
+
+    return [i for i in range(len(nums)) if nums[i] > 0]
+```
 
 ## 509. Fibonacci Number
 
@@ -849,3 +889,45 @@ def tic_tac_toe(moves: List[List[int]]):
         return "Draw"
     return "Pending"
 ```
+
+## 1470. [Shuffle the Array](https://leetcode.com/problems/shuffle-the-array/)
+
+```
+def shuffle(nums, n):
+    shuffled_array = []
+    for i in range(n):
+        shuffled_array += [nums[i]]
+        shuffled_array += [nums[i+n]]
+    return shuffled_array
+```
+
+Or use zip.
+
+```
+def shuffle(nums, n):
+    return list(sum(zip(nums[:n],nums[n:]), ()))
+```
+
+
+## 1480. [Running Sum of 1D Array](https://leetcode.com/problems/running-sum-of-1d-array/)
+
+The simple solution uses itertools. The complex uses DP.
+
+```
+from itertools import accumulate
+
+def running_sum(nums):
+    return accumulate(nums)
+    
+```
+
+```
+    
+def running_sum(nums):
+    i = 1
+    while i < len(nums):
+        nums[i] += nums[i-1]
+        i += 1
+    return nums
+```
+
