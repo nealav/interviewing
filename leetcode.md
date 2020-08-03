@@ -7,8 +7,8 @@ Given an array of ints, return indices of two numbers such that they add to the 
 Brute Force - 2 nested loops.
 Ideal - One-pass Hash Table, iterate the array while inserting elements into the table. The key being the number and it’s value the index.
 
-```
-def twoSum(self, nums, target):
+```python3
+def two_sum(nums, target):
     dict = {}
     for i, num in enumerate(nums):
         complement = target - num
@@ -17,7 +17,6 @@ def twoSum(self, nums, target):
         else:
             return [dict[complement], i]
 ```
-
 
 ## 11. Container With Most Water
 
@@ -94,6 +93,21 @@ def letter_combinations(digits):
     return all_combinations
 ```
 
+## 20. [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)
+
+```python3
+def valid_parentheses(s):
+    stack = ['N']
+    m = {')' : '(', ']' : '[', '}' : '{'}
+    for i in s:
+        if i in m.keys():
+            if stack.pop() != m[i]:
+                return False
+        else:
+            stack.append(i)
+    return len(stack) == 1
+```
+
 ## 21. [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)
 
 Loop through the lists iteratively, verifying their values and incrementing them forwards respectively. Weave them together.
@@ -111,6 +125,21 @@ def merge_two_sorted_lists(l1, l2):
         cur = cur.next
     cur.next = l1 or l2
     return dummy.next
+```
+
+## 22. [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/)
+
+```python3
+def generate_parentheses(n):
+    def generate(p, left, right, parens=[]):
+        if left:
+            generate(p + '(', left - 1, right)
+        if right > left:
+            generate(p + ')', left, right - 1)
+        if not right:
+            parens += p,
+        return parens
+    return generate('', n, n)
 ```
 
 ## 23. Merge K Sorted Lists
@@ -941,6 +970,33 @@ def diameter_binary_tree(root):
 
     depth(root)
     return diameter
+```
+
+## 581. [Shortest Unsorted Continuous Subarray](https://leetcode.com/problems/shortest-unsorted-continuous-subarray/)
+
+```python3
+def find_unsorted_subarray(nums):
+    if len(nums) < 2: 
+        return 0
+
+    l, r = 0, len(nums) - 1
+    while l < len(nums) - 1 and nums[l] <= nums[l + 1]:
+        l += 1
+    while r > 0 and nums[r] >= nums[r -1]:
+        r -= 1
+    if l > r:
+        return 0
+
+    temp = nums[l:r+1]
+    tempMin = min(temp)
+    tempMax = max(temp)
+
+    while l > 0 and tempMin < nums[l-1]:
+        l -= 1
+    while r < len(nums) - 1 and tempMax > nums[r+1]:
+        r += 1
+
+    return r - l + 1
 ```
 
 ## 617. [Merge Two Binary Trees](https://leetcode.com/problems/merge-two-binary-trees/)
