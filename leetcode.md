@@ -1,6 +1,6 @@
 # Leetcode
 
-## 1. Two Sum
+## 1. [Two Sum](https://leetcode.com/problems/two-sum)
 
 Given an array of ints, return indices of two numbers such that they add to the target number.
 
@@ -331,6 +331,17 @@ def isSameTree(self, root):
            self.isSameTree(p.left, q.left)    
 ```
 
+## 101. [Symmetric Tree](https://leetcode.com/problems/symmetric-tree/)
+
+```python3
+def is_symmetric(root):
+    def mirror(left, right):
+        if left and right and left.val == right.val: 
+            return mirror(left.left, right.right) and mirror(left.right, right.left)
+        return left == right
+    return not root or mirror(root.left, root.right)
+```
+
 ## 104. Maximum Depth of a Binary Tree
 
 https://leetcode.com/problems/maximum-depth-of-binary-tree/
@@ -412,7 +423,7 @@ def maxPathSum(self, root: TreeNode) -> int:
     return max_path	
 ```
 
-128. Longest Consecutive Sequence.
+## 128. Longest Consecutive Sequence
 
 Given an unsorted array of ints, find the longest consecutive sequence of elements. Must be O(n).
 
@@ -431,6 +442,29 @@ def longestConsecutive(self, nums):
 
 Convert the array to a set and walk each streak individually and keep track of it's length as it runs. Reset if a number is not within it's streak.
 
+## 136. [Single Number](https://leetcode.com/problems/single-number/)
+
+```python3
+def single_number(nums):
+    n = 0
+    for num in nums:
+        n ^= num
+    return n
+```
+
+## 141. [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)
+
+```python3
+def floyd_cycle_detection(head): 
+    slow = head 
+    fast = head.next
+    while slow and fast and fast.next: 
+        slow = slow.next
+        fast = fast.next.next
+        if slow == fast: 
+            return True
+    return False
+```
 
 ## 146. LRU Cache
 
@@ -541,6 +575,56 @@ def findMin(self, nums):
 
 The main idea is to converge the left and right bounds to the minimum value regardless of pivot. If there is a larger number at the mid we know that the array is rotated to have the minimum to the right of it, and if it is smaller than the rightest element we know we are cycling through the rotated part but we don't know that the number is the minimum. We need to wait for the loop to converge to right which will be the minimum.
 
+## 155. [Min Stack](https://leetcode.com/problems/min-stack/)
+
+```python3
+class MinStack(object):
+
+    def __init__(self):
+        self.stack = []
+        
+    def push(self, x):
+        self.stack.append((x, min(self.get_min(), x))) 
+           
+    def pop(self):
+        self.stack.pop()
+
+    def top(self):
+        if self.stack:
+            return self.stack[-1][0]
+        
+    def get_min(self):
+        if self.stack:
+            return self.stack[-1][1]
+        return sys.maxint          
+```
+
+## 160. [Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/)
+
+```python3
+def get_intersection_node(headA, headB):
+    if headA and headB:
+        A, B = headA, headB
+        while A != B:
+            A = A.next if A else headB
+            B = B.next if B else headA
+        return A
+```
+
+## 169. [Majority Element](https://leetcode.com/problems/majority-element/)
+
+```python3
+def majority_element(nums):
+    count, cand = 0, 0
+    for num in nums:
+        if num == cand:
+            count += 1
+        elif count == 0:
+            cand, count = num, 1
+        else:
+            count -= 1
+    return cand
+```
 
 ## 189. Rotate Array
 
@@ -578,6 +662,31 @@ def hammingWeight(n):
     return c
 ```
 
+## 198. [House Robber](https://leetcode.com/problems/house-robber/)
+
+```python3
+def rob(nums):
+    # Base Case: nums[0] = nums[0]
+    # nums[1] = max(nums[0], nums[1])
+    # nums[k] = max(k + nums[k-2], nums[k-1])
+    
+    prev = curr = 0
+    for num in nums:
+      temp = prev
+      prev = curr
+      curr = max(num + temp, prev)
+    return curr
+```
+
+## 206. [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)
+
+```python3
+def reverse_list(head):
+    cur, prev = head, None
+    while cur:
+        cur.next, prev, cur = prev, cur, cur.next
+    return prev
+```
 
 ## 217. Contains Duplicate
 
@@ -604,6 +713,22 @@ def invertTree(self, root):
     return root
 ```
 
+## 234. [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/)
+
+```python3
+def isPalindrome(head):
+    rev = None
+    slow = fast = head
+    while fast and fast.next:
+        fast = fast.next.next
+        rev, rev.next, slow = slow, rev, slow.next
+    if fast:
+        slow = slow.next
+    while rev and rev.val == slow.val:
+        slow = slow.next
+        rev = rev.next
+    return not rev
+```
 
 ## 238. Product of Array Except Self
 
@@ -801,14 +926,31 @@ def fib(n):
 
 This can be derived with Linear Algebra.
 
+## 543. [Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/)
+
+```python3
+def diameter_binary_tree(root):
+    diameter = 0
+
+    def depth(p):
+        if not p: 
+            return 0
+        left, right = depth(p.left), depth(p.right)
+        diameter = max(diameter, left+right)
+        return 1 + max(left, right)
+
+    depth(root)
+    return diameter
+```
+
 ## 617. [Merge Two Binary Trees](https://leetcode.com/problems/merge-two-binary-trees/)
 
 ```python3
-def mergeTrees(self, t1, t2):
+def merge_trees(t1, t2):
     if t1 and t2:
         root = TreeNode(t1.val + t2.val)
-        root.left = self.mergeTrees(t1.left, t2.left)
-        root.right = self.mergeTrees(t1.right, t2.right)
+        root.left = merge_trees(t1.left, t2.left)
+        root.right = merge_trees(t1.right, t2.right)
         return root
     else:
         return t1 or t2
