@@ -24,7 +24,7 @@ Brute Force - O(n^2). Find all containers and their volume.
 Ideal - Start with the widest container, the container with the first and last lines. We cannot increase the width of this container to increase the volume therefore we need to increase the height. Removing the larger height candidate will not increase the height so we remove and move the smaller height candidate (either the left or right most).
 
 
-```
+```python3
 def maxArea(self, height):
     i, j = 0, len(height) - 1
     water = 0
@@ -42,7 +42,7 @@ def maxArea(self, height):
 Brute force - O(n^3). Loop through each triplet.
 Ideal - Sort the array, then, for each element we neeed to find the matching 2 other targets that complete the triplet. Have a left and right pointer to the ends of the rest of the array. We know that if the sum of the two-target is higher than necessary, we move the right pointer down and vice versa the left pointer up. O(n^2)
 
-```
+```python3
 def threeSum(self, nums):
     res = []
     nums.sort()
@@ -70,7 +70,7 @@ def threeSum(self, nums):
 
 Given a string of digits, return all possible letter combinations.
 
-```
+```python3
 def letter_combinations(digits):
     interpret_digit = {
         '1': '',
@@ -112,7 +112,7 @@ def valid_parentheses(s):
 
 Loop through the lists iteratively, verifying their values and incrementing them forwards respectively. Weave them together.
 
-```
+```python3
 def merge_two_sorted_lists(l1, l2):
     dummy = cur = ListNode(0)
     while l1 and l2:
@@ -146,7 +146,7 @@ def generate_parentheses(n):
 
 Using a heap you can add an element from every sorted list into the heap along with it's list and pop them off in order. This can organize the sorted lists in O(m*n*log(n)) where m is the number of lists and n is the total number of ListNodes.
 
-```
+```python3
 import heapq
 
 def mergeKLists(self, lists: List[ListNode]) -> ListNode:
@@ -170,7 +170,7 @@ def mergeKLists(self, lists: List[ListNode]) -> ListNode:
 
 In-place.
 
-```
+```python3
 def removeDuplicates(self, A):
     if not A:
         return 0
@@ -216,6 +216,20 @@ def search(self, nums, target):
                 high = mid - 1
 
     return -1
+```
+
+## 46. [Permutations](https://leetcode.com/problems/permutations/)
+
+```python3
+def permute(self, nums):
+    perms = [[]]   
+    for n in nums:
+        new_perms = []
+        for perm in perms:
+            for i in range(len(perm)+1):   
+                new_perms.append(perm[:i] + [n] + perm[i:])
+        perms = new_perms
+    return perms
 ```
 
 ## 49. Group Anagrams
@@ -902,6 +916,17 @@ def get_sum(a, b):
     return a
 ```
 
+## 406. [Queue Reconstruction by Height](https://leetcode.com/problems/queue-reconstruction-by-height/)
+
+```python3
+def reconstruct_queue(people):
+    people.sort(key=lambda (h, k): (-h, k))
+    queue = []
+    for p in people:
+        queue.insert(p[1], p)
+    return queue
+```
+
 ## 438. Find All Anagrams in a String
 
 ```
@@ -1030,11 +1055,26 @@ def top_K_frequent(words, k):
     return heapq.nsmallest(k, freqs, key=lambda word:(~Freqs[word], word))
 ```
 
+## 739. [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/)
+
+```python3
+def daily_temperatures(T):
+    temps = [0] * len(T)
+    stack = []
+    for i, t in enumerate(T):
+      while stack and T[stack[-1]] < t:
+        cur = stack.pop()
+        temps[cur] = i - cur
+      stack.append(i)
+
+    return temps
+```
+
 ## 794. Valid Tic-Tac-Toe State
 
 Given a board state, determine if it is valid.
 
-```
+```python3
 def is_win(b):
     # 0 1 2
     # 3 4 5
@@ -1068,7 +1108,7 @@ Check the board winner with hard coded values. And verify the player counts befo
 
 Given a paragraph of words return the most frequent. Exclude banned list of words.
 
-```
+```python3
 def most_common_word(paragraph, banned):
     banned_words = set(banned)
     words = re.findall(r'\w+', p.lower())
@@ -1079,7 +1119,7 @@ def most_common_word(paragraph, banned):
 
 Given an order of moves, determine the winner of a tic tac toe game.
 
-```
+```python3
 def tic_tac_toe(moves: List[List[int]]):
     # 0 1 2
     # 3 4 5
@@ -1102,7 +1142,7 @@ def tic_tac_toe(moves: List[List[int]]):
 
 ## 1470. [Shuffle the Array](https://leetcode.com/problems/shuffle-the-array/)
 
-```
+```python3
 def shuffle(nums, n):
     shuffled_array = []
     for i in range(n):
@@ -1123,7 +1163,7 @@ def shuffle(nums, n):
 
 The simple solution uses itertools. The complex uses DP.
 
-```
+```python3
 from itertools import accumulate
 
 def running_sum(nums):
@@ -1131,8 +1171,7 @@ def running_sum(nums):
     
 ```
 
-```
-    
+```python3
 def running_sum(nums):
     i = 1
     while i < len(nums):
