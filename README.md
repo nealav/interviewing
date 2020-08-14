@@ -2,7 +2,19 @@
 
 ## Reference
 
-* [kamyu104/LeetCode-Solutions](https://github.com/kamyu104/LeetCode-Solutions)
+* https://github.com/kamyu104/LeetCode-Solutions
+* https://github.com/Garvit244/Leetcode
+* https://github.com/yangshun/front-end-interview-handbook
+* https://github.com/yangshun/tech-interview-handbook
+* https://github.com/donnemartin/interactive-coding-challenges
+* https://github.com/andreis/interview
+* https://github.com/chassing/linux-sysadmin-interview-questions
+* https://github.com/fishercoder1534/Leetcode
+* https://github.com/jwasham/coding-interview-university
+* https://github.com/shashank88/system_design
+* https://github.com/WebBreacher/offensiveinterview
+* https://github.com/donnemartin/system-design-primer
+* https://github.com/kdn251/interviews
 
 ## Algorithms
 
