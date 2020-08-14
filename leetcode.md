@@ -37,13 +37,13 @@ def maxArea(self, height):
     return water
 ```
 
-## 15. 3-Sum
+## 15. [3 Sum](https://leetcode.com/problems/3sum/)
 
-Brute force - O(n^3). Loop through each triplet.
-Ideal - Sort the array, then, for each element we neeed to find the matching 2 other targets that complete the triplet. Have a left and right pointer to the ends of the rest of the array. We know that if the sum of the two-target is higher than necessary, we move the right pointer down and vice versa the left pointer up. O(n^2)
+The brute-force algorithm is loops through each triplet. It is O(n^3).
+The ideal algorithm sorts the array, then for each element finds the matching 2 targets that complete the triplet. A left and right pointer at each of the array moves up and down respectively depending on whether the two-target sum is higher or lower than necessary.
 
 ```python3
-def threeSum(self, nums):
+def three_sum(nums):
     res = []
     nums.sort()
     for i in xrange(len(nums)-2):
