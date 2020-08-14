@@ -32,6 +32,10 @@
 
 ## Array
 
+| Title           | Time            | Space           |
+|---------------- | --------------- | --------------- |
+[3 Sum](https://github.com/nealav/interviewing/blob/master/leetcode.md#15-3-sum) |  O(n^2)  | O(1) |
+
 ## String
 
 ## Linked List
@@ -46,9 +50,9 @@
 
 ## Hash Table
 
-| Title           |  Time           | Space           |
+| Title           | Time            | Space           |
 |---------------- | --------------- | --------------- |
-[Single Number](https://github.com/nealav/interviewing/blob/master/leetcode.md#1-two-sum) |  O(n)  | O(1) | 
+[Two Sum](https://github.com/nealav/interviewing/blob/master/leetcode.md#1-two-sum) |  O(n)  | O(n) |
 
 ## Math
 
