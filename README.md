@@ -43,6 +43,9 @@
 
 ## Bit Manupulation
 
+| Title           | Time            | Space           |
+|---------------- | --------------- | --------------- |
+
 ## Array
 
 | Title           | Time            | Space           |
@@ -58,7 +61,6 @@
 [Longest Repeating Character Replacement](https://github.com/nealav/interviewing/blob/master/leetcode.md#424-longest-repeating-character-replacement) |  O(n)  | O(1) |
 [Minimum Window Substring](https://github.com/nealav/interviewing/blob/master/leetcode.md#76-minimum-window-substring) |  O(n)  | O(k) |
 [Longest Palindromic Substring](https://github.com/nealav/interviewing/blob/master/leetcode.md#5-longest-palindromic-substring) |  O(n^2)  | O(1) |
-[Valid Parentheses](https://github.com/nealav/interviewing/blob/master/leetcode.md#20-valid-parentheses) |  O(n)  | O(n) |
 [Group Anagrams](https://github.com/nealav/interviewing/blob/master/leetcode.md#49-group-anagrams) |  O(n\*klogk)  | O(n) |
 [Valid Palindrome](https://github.com/nealav/interviewing/blob/master/leetcode.md#125-valid-palindrome) |  O(n)  | O(1) |
 [Valid Anagram](https://github.com/nealav/interviewing/blob/master/leetcode.md#242-valid-anagram) |  O(nlogn)  | O(1) |
@@ -66,13 +68,29 @@
 
 ## Linked List
 
+| Title           | Time            | Space           |
+|---------------- | --------------- | --------------- |
+
 ## Stack
+
+| Title           | Time            | Space           |
+|---------------- | --------------- | --------------- |
+[Valid Parentheses](https://github.com/nealav/interviewing/blob/master/leetcode.md#20-valid-parentheses) |  O(n)  | O(n) |
 
 ## Queue
 
+| Title           | Time            | Space           |
+|---------------- | --------------- | --------------- |
+
 ## Heap
 
+| Title           | Time            | Space           |
+|---------------- | --------------- | --------------- |
+
 ## Tree
+
+| Title           | Time            | Space           |
+|---------------- | --------------- | --------------- |
 
 ## Hash Table
 
@@ -82,24 +100,61 @@
 
 ## Math
 
+| Title           | Time            | Space           |
+|---------------- | --------------- | --------------- |
+
 ## Two Pointers
+
+| Title           | Time            | Space           |
+|---------------- | --------------- | --------------- |
 
 ## Sort
 
+| Title           | Time            | Space           |
+|---------------- | --------------- | --------------- |
+
 ## Recursion
+
+| Title           | Time            | Space           |
+|---------------- | --------------- | --------------- |
 
 ## Binary Search
 
+| Title           | Time            | Space           |
+|---------------- | --------------- | --------------- |
+
 ## Binary Search Tree
+
+| Title           | Time            | Space           |
+|---------------- | --------------- | --------------- |
 
 ## Breadth-First Search
 
+| Title           | Time            | Space           |
+|---------------- | --------------- | --------------- |
+
 ## Depth-First Search
+
+| Title           | Time            | Space           |
+|---------------- | --------------- | --------------- |
 
 ## Back Tracking
 
+| Title           | Time            | Space           |
+|---------------- | --------------- | --------------- |
+
 ## Dynamic Programming
+
+| Title           | Time            | Space           |
+|---------------- | --------------- | --------------- |
 
 ## Greedy
 
+| Title           | Time            | Space           |
+|---------------- | --------------- | --------------- |
+
 ## Graph
+
+| Title           | Time            | Space           |
+|---------------- | --------------- | --------------- |
+
