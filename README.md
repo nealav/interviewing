@@ -51,6 +51,17 @@
 
 ## String
 
+| Title           | Time            | Space           |
+|---------------- | --------------- | --------------- |
+[Longest Repeating Character Replacement](https://github.com/nealav/interviewing/blob/master/leetcode.md#424-longest-repeating-character-replacement) |  O(n)  | O(1) |
+[Minimum Window Substring](https://github.com/nealav/interviewing/blob/master/leetcode.md#76-minimum-window-substring) |  O(n)  | O(k) |
+[Longest Palindromic Substring](https://github.com/nealav/interviewing/blob/master/leetcode.md#5-longest-palindromic-substring) |  O(n^2)  | O(1) |
+[Valid Parentheses](https://github.com/nealav/interviewing/blob/master/leetcode.md#20-valid-parentheses) |  O(n)  | O(n) |
+[Group Anagrams](https://github.com/nealav/interviewing/blob/master/leetcode.md#49-group-anagrams) |  O(n\*klogk)  | O(n) |
+[Valid Palindrome](https://github.com/nealav/interviewing/blob/master/leetcode.md#125-valid-palindrome) |  O(n)  | O(1) |
+[Valid Anagram](https://github.com/nealav/interviewing/blob/master/leetcode.md#242-valid-anagram) |  O(nlogn)  | O(1) |
+[Palindromic Substrings](https://github.com/nealav/interviewing/blob/master/leetcode.md#647-palindromic-substrings) |  O(n^2)  | O(1) |
+
 ## Linked List
 
 ## Stack
