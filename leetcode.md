@@ -18,6 +18,23 @@ def two_sum(nums, target):
             return [dict[complement], i]
 ```
 
+## 5. [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)
+
+Expand around the center, or [Manacher's Algorithm](https://en.wikipedia.org/wiki/Longest_palindromic_substring#Manacher's_algorithm).
+
+```python3
+def longest_palindrome(s):
+    res = ""
+    for i in range(len(s)):
+        res = max(self.helper(s, i, i), self.helper(s, i, i+1), res, key=len)
+    return res
+
+def helper(s, l, r):
+    while 0 <= l and r < len(s) and s[l] == s[r]:
+            l -= 1; r += 1
+    return s[l+1:r]
+```
+
 ## 11. Container With Most Water
 
 Brute Force - O(n^2). Find all containers and their volume.
@@ -232,11 +249,9 @@ def permute(self, nums):
     return perms
 ```
 
-## 49. Group Anagrams
+## 49. [Group Anagrams](https://leetcode.com/problems/group-anagrams/)
 
-Given an array of strings, group anagrams.
-
-```
+```python3
 def group_anagrams(words):
     groups = {}
     for word in words:
@@ -289,6 +304,32 @@ def climingStairs(n):
     for i in range(2, n):
         stairs[i] = stairs[i-1] + stairs[i-2]
     return stairs[n-1]
+```
+
+## 76. [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)
+
+Maintain a sliding window with desireable substrings and two-pointers.
+
+```python3
+def min_window(s, t):
+    need = collections.Counter(t)
+    missing = len(t)
+    start, end = 0, 0
+    i = 0
+    for j, char in enumerate(s, 1):
+        if need[char] > 0:
+            missing -= 1
+        need[char] -= 1
+        if missing == 0:
+            while i < j and need[s[i]] < 0:
+                need[s[i]] += 1
+                i += 1
+            need[s[i]] += 1
+            missing += 1
+            if end == 0 or j-i < end-start:
+                start, end = i, j
+            i += 1
+    return s[start:end]
 ```
 
 ## 79. Word Search
@@ -464,6 +505,16 @@ def maxPathSum(self, root: TreeNode) -> int:
         
     get_max_gain(root)
     return max_path	
+```
+
+## 125. [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)
+
+Reverse and equality check, or use two-pointers and contract inward from the sides.
+
+```python3
+def is_palindrome(self, s):
+    s = ''.join(c for c in s if c.isalnum()).lower()
+    return s == s[::-1]
 ```
 
 ## 128. Longest Consecutive Sequence
@@ -796,9 +847,9 @@ def productExceptSelf(self, nums):
     return output
 ```
 
-## 242. Valid Anagram
+## 242. [Valid Anagram](https://leetcode.com/problems/valid-anagram/)
 
-```
+```python3
 def valid_anagram(s, t):
     return len(s) == len(t) and sorted(s) == sorted(t)
 ```
@@ -927,6 +978,24 @@ def reconstruct_queue(people):
     return queue
 ```
 
+## 424. [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/)
+
+Use a sliding window that keeps track of the count of the most unique character in the window.
+
+```python3
+def character_replacement(s, k):
+    count = {}
+    max_count = start = result = 0
+    for end in range(len(s)):
+        count[s[end]] = count.get(s[end], 0) + 1
+        max_count = max(max_count, count[s[end]])
+        if end - start + 1 - max_count > k:
+            count[s[start]] -= 1
+            start += 1
+        result = max(result, end - start + 1)
+    return result
+```
+
 ## 438. Find All Anagrams in a String
 
 ```
@@ -1035,6 +1104,24 @@ def merge_trees(t1, t2):
         return root
     else:
         return t1 or t2
+```
+
+## 647. [Palindromic Substringgs](https://leetcode.com/problems/palindromic-substrings/)
+
+Expand around the centers.
+
+```python3
+def count_substrings(s):
+    length = len(s)
+    result = 0
+    for i in range(2*length - 1):
+        left = i//2
+        right = (i+1)//2
+        while left >= 0 and right < length and s[left] == s[right]:
+            result += 1
+            left -= 1
+            right += 1
+    return result
 ```
 
 ## 692. Top K Frequent Words
