@@ -1106,7 +1106,7 @@ def merge_trees(t1, t2):
         return t1 or t2
 ```
 
-## 647. [Palindromic Substringgs](https://leetcode.com/problems/palindromic-substrings/)
+## 647. [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/)
 
 Expand around the centers.
 
