@@ -782,15 +782,10 @@ def reverse_list(head):
     return prev
 ```
 
-## 217. Contains Duplicate
+## 217. [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)
 
-Given array of integers, find if array has duplicates.
-
-Brute force - check one int across the array (n^2) or sort the array and check if any repeats one-after (nlogn)
-Ideal - throw ints into set until repeat or check set length inequality.
-
-```
-def containsDuplicate(self, nums):
+```python3
+def contains_duplicate(nums):
     return len(nums) != len(set(nums))
 ```
 
@@ -824,16 +819,12 @@ def isPalindrome(head):
     return not rev
 ```
 
-## 238. Product of Array Except Self
+## 238. [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)
 
-Given an array of ints, return the product of the array except the element for each element as an array.
+Make the left-product array and the right-product array and multiply them together. Or make the left-product array, then while looping through the right-product keep a running product of the right products and multiply them by the running right-left products.
 
-Brute Force - make an array and loop through for each element multiplying and skipping the element in question (n^2)
-Ideal - Loop through once, making an array of the ‘right product’ to the element. Loop through again making an array of the ‘left product’ to the element. Multiple the left and right product arrays.
-Ideal Optimized - Make the left product array, and then while looping through the rights keep a running product of the right products and multiply them by the running right product. [O(n) time]
-
-```
-def productExceptSelf(self, nums):
+```python3
+def product_except_self(nums):
     left_product = 1
     n = len(nums)
     output = []
@@ -841,7 +832,7 @@ def productExceptSelf(self, nums):
         output.append(left_product)
         left_product = left_product * nums[i]
     right_product = 1
-    for i in range(n-1,-1,-1): #backwards
+    for i in range(n-1, -1, -1):
         output[i] = output[i] * right_product
         right_product = right_product * nums[i]
     return output
