@@ -48,6 +48,8 @@
 | Title           | Time            | Space           |
 |---------------- | --------------- | --------------- |
 [3 Sum](https://github.com/nealav/interviewing/blob/master/leetcode.md#15-3-sum) |  O(n^2)  | O(1) |
+[Product Of Array Except Self](https://github.com/nealav/interviewing/blob/master/leetcode.md#238-product-of-array-except-self) |  O(n)  | O(n) |
+[Contains Duplicate](https://github.com/nealav/interviewing/blob/master/leetcode.md#217-contains-duplicate) |  O(n)  | O(n) |
 
 ## String
 
