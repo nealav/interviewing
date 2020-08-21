@@ -105,6 +105,41 @@ def letter_combinations(digits):
     return all_combinations
 ```
 
+## 18. [4 Sum](https://leetcode.com/problems/4sum/)
+
+* N Sum
+| Time    | Space    | Tags           |
+|-------- | -------- | -------------- |
+| O(n^k) | O(n) | Recursion
+
+```python3
+def four_sum(nums, target):
+    def n_sum(nums, target, n, result, results):
+        if len(nums) < n or n < 2 or target < nums[0] * n or target > nums[-1] * n:
+            return
+        if n == 2:
+            l, r =  0, len(nums) - 1
+            while l < r:
+                s = nums[l] + nums[r]
+                if s == target:
+                    results.append(result + [nums[l], nums[r]])
+                    l += 1
+                    while l < r and nums[l] == nums[l - 1]:
+                        l += 1
+                elif s < target:
+                    l += 1
+                else:
+                    r -= 1
+        else:
+            for i in range(len(nums) - n + 1):
+                if i == 0 or (i > 0 and nums[i - 1] != nums[i]):
+                    n_sum(nums[i+1:], target - nums[i], n - 1, result + [nums[i]], results)
+
+    results = []
+    n_sum(sorted(nums), target, 4, [], results)
+    return results
+```
+
 ## 20. [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)
 
 ```python3
@@ -293,6 +328,12 @@ def climingStairs(n):
     for i in range(2, n):
         stairs[i] = stairs[i-1] + stairs[i-2]
     return stairs[n-1]
+```
+
+## 72. [Edit Distance](https://leetcode.com/problems/edit-distance/)
+
+```python3
+
 ```
 
 ## 76. [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)
