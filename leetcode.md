@@ -35,14 +35,14 @@ def helper(s, l, r):
     return s[l+1:r]
 ```
 
-## 11. Container With Most Water
+## 11. [Container With Most Water](https://leetcode.com/problems/container-with-most-water/)
 
-Brute Force - O(n^2). Find all containers and their volume.
-Ideal - Start with the widest container, the container with the first and last lines. We cannot increase the width of this container to increase the volume therefore we need to increase the height. Removing the larger height candidate will not increase the height so we remove and move the smaller height candidate (either the left or right most).
+The brute-force algorithm finds all containers and their volumes in O(n^2).
+The ideal algorithm starts with the widest container, the container with the first and last lines. We cannot increase the width of this container to increase the volume therefore we need to increase the height. Removing the larger height candidate will not increase the height so we remove and move the smaller height candidate (either the left or right most).
 
 
 ```python3
-def maxArea(self, height):
+def max_area(height):
     i, j = 0, len(height) - 1
     water = 0
     while i < j:
@@ -203,14 +203,12 @@ def removeDuplicates(self, A):
 Maintain a tail to add numbers and skip over duplicates until you reach the next new number every time.
 
 
-## 33. Search in a Rotated Sorted Array
+## 33. [Search in a Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)
 
-Given a sorted array of integers rotated around a pivot and a target num, find the index of the target num.
+Modified binary search conditions based on low/mid/high target ranges.
 
-Ideal - Modify binary search conditions based on low/mid/high target ranges.
-
-```
-def search(self, nums, target):
+```python3
+def search(nums, target):
     if not nums:
         return -1
 
@@ -260,16 +258,12 @@ def group_anagrams(words):
     return groups.values()
 ```
 
-## 53. Maximum Subarray
+## 53. [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)
 
-Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
+The brute-force algorithm loops through all possible subarrays in O(n^2). The ideal algorithm keeps a sliding window and resets the pointers if the sum becomes 0 or negative. The optimized algorithm uses DP and only keeps track of the previous sum as we do a single pass through the array.
 
-Brute force - loop through all the subarrays starting at an index and calc the sum, keep track of max. O(n^2).
-Ideal - Keep a sliding window. If the subarray sum is positive keep sliding, if it ever goes to 0 or a negative number, restart after the subarray window. Keep track of max sum. O(n).
-Optimized - Dynamic Programming, we only need to keep track of the previous sum. (1) If the subarray sum is positive, it can make the next number bigger so we store the sum in the index (2) if it is 0 or negative then we lose it and restart the sum count. This is a one pass.
-
-```
-def maxSubArray(self, nums):
+```python3
+def max_subarray(self, nums):
     for i in range(1, len(nums)):
         nums[i] = max(nums[i], nums[i-1] + nums[i])
     return max(nums)
@@ -623,12 +617,10 @@ class LRUCache:
 
 The basic implementation of a cache relies on a data structure which uses an underlying hashtable.
 
-## 152. Maximum Product Subarray
+## 152. [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/)
 
-Given an integer array nums, find the contiguous subarray within an array (containing at least one number) which has the largest product.
-
-```
-    def maxProduct(self, A):
+```python3
+    def max_product(self, A):
         B = A[::-1]
         for i in range(1, len(A)):
             A[i] *= A[i - 1] or 1
@@ -638,22 +630,17 @@ Given an integer array nums, find the contiguous subarray within an array (conta
 
 First, if there's no zero in the array, then the subarray with maximum product must start with the first element or end with the last element. And therefore, the maximum product must be some prefix product or suffix product. So in this solution, we compute the prefix product A and suffix product B, and simply return the maximum of A and B.
 
-Why? Here's the proof:
-
 Say, we have a subarray A[i : j](i != 0, j != n) and the product of elements inside is P. Take P > 0 for example: if A[i] > 0 or A[j] > 0, then obviously, we should extend this subarray to include A[i] or A[j]; if both A[i] and A[j] are negative, then extending this subarray to include both A[i] and A[j] to get a larger product. Repeating this procedure and eventually we will reach the beginning or the end of A.
 
 What if there are zeroes in the array? Well, we can split the array into several smaller ones. That's to say, when the prefix product is 0, we start over and compute prefix product from the current element instead. And this is exactly what A[i] *= (A[i - 1]) or 1 does.
 
 
-## 153. Find Minimum in Rotated Sorted Array
+## 153. [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)
 
-Suppose an array of integers is sorted and rotated around a pivot. Find the minimum.
+Modified binary search (Binary Select?) in the left and right trees in O(logn).
 
-Brute Force - One-pass check for the minimum in O(n)
-Ideal - Modified binary search (binary select?) in the left and right trees in O(logn)
-
-```
-def findMin(self, nums):
+```python3
+def find_min(nums):
     left, right = 0, len(nums) - 1
 
     while left < right:
@@ -731,24 +718,24 @@ def rotate(nums, k):
     nums[:] = nums[n-k:] + nums[:n-k]   # Can also use negative indices.
 ```
 
-## 190. Reverse Bits
+## 190. [Reverse Bits](https://leetcode.com/problems/reverse-bits/)
 
 Pop off least siginficant bit and right shift it.
 
-```
-def reverseBits(n):
+```python3
+def reverse_bits(n):
     res = 0
     for i in range(32):
         res = (res << 1) + (n & 1)
         n >>= 1
 ```
 
-## 191. Number of 1 Bits
+## 191. [Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/)
 
 Pop the least significant bit and count until 0.
 
-```
-def hammingWeight(n):
+```python3
+def hamming_weight(n):
     c = 0
     while n:
         n &= n - 1
@@ -845,27 +832,29 @@ def valid_anagram(s, t):
     return len(s) == len(t) and sorted(s) == sorted(t)
 ```
 
-## 268. Missing Number
+## 268. [Missing Number](https://leetcode.com/problems/missing-number/)
 
-XOR can be used to eliminate pairs of the index XOR number since there is a constant distribution. Binary search can be used in a sorted array. Or the sum in O(n).
+XOR can be used to eliminate pairs of the index XOR number since there is a constant distribution. Binary search can be used in a sorted array as well.
 
-```
-def missingNumber(nums):
+```python3
+def missing_number(nums):
     missing_number = len(nums)
-    for i in range(0, len(nums)+1):
+    for i in range(0, len(nums) + 1):
         missing_number ^= i
         missing_number ^= nums[i]
     return missing_number
 ```
 
-```
+Discrete math sum equation.
+
+```python3
 def missingNumber(nums):
     return (len(nums)*(len(nums) + 1)/2) - sum(nums)
 ```
 
 ## 283. [Move Zeroes](https://leetcode.com/problems/move-zeroes/)
 
-```
+```python3
 def move_zeroes(nums):
     zeroes = nums.count(0)
     nums[:] = [i for i in nums if i != 0]
@@ -874,7 +863,7 @@ def move_zeroes(nums):
 
 ## 284. Peeking Iterator
 
-```
+```python3
 class PeekingIterator(object):
     def __init__(self, iterator):
         self.iter = iterator
@@ -903,22 +892,21 @@ Simple sorting will be an O(nlogn) solution. Sort every time. Maintaining two he
 This problem can be broken down into subtracting a single coin from the current amount value and checking if the subtracted amount has a number of times associated with it for all the coins in the bank.
 
 
-## 338. Counting Bits
+## 338. [Counting Bits](https://leetcode.com/problems/counting-bits/)
 
 Bit manipulation through single level DP. A number that is even can be turned into an odd number through a right shift by 1 and a number that is odd has the name number of bits as the previous number + 1.
 
-```
-def countBits(n):
+```python3
+def count_bits(n):
     res = []
     res.append(0)
-    for i in range(1, num+1):
-        if (i&1)==0: #odd
+    for i in range(1, num + 1):
+        if (i & 1) == 0: #odd
             res.append(res[i >> 1])
         else:
             res.append(res[i - 1] + 1)
     return res
 ```
-
 
 ## 342. Is Power Of Four
 
@@ -934,7 +922,6 @@ def isPowerOfFour(n):
 
 ```
 
-
 ## 347. Top K Frequent Elements
 
 Given a non-empty array of integers, return the k most frequent elements.
@@ -944,17 +931,17 @@ https://leetcode.com/problems/top-k-frequent-elements/solution/
 Using bucket sort we can maintain an array where the frequency is the index. Make a hashmap with the frequencies and add them to an array. This will take O(N). Using the bucket array we can return the top K values where K will always be less than N because the frequency can be no larger than the number of integers.
 
 
-## 371. Sum of Two Integers Without '+'
+## 371. [Sum of Two Integers Without '+' or '-'](https://leetcode.com/problems/sum-of-two-integers/)
 
 Add the two numbers with the XOR operator. However in Binary this will take 1+1 and instead of 0 with a carry it will just be 0. We need to account for the carry with the & operator. The carry gets added to the next number so we keep adding until it becomes 0.
 
-```
+```python3
 def get_sum(a, b):
     c = 0
     while b != 0:
         c = a & b
         a = a ^ b
-        b = c<<1 #reassign carry
+        b = c << 1 #reassign carry
     return a
 ```
 
