@@ -456,7 +456,7 @@ Recursively build the tree top-down. Time complexity O(n), space complexity O(n)
 Keep track of the minimum price and maximum profit found: if a new minimum price is found then calculate the running profits using that. The current minimum price will always yield the maximum profit for every stock price change after it, and if a new minimum is found the same rule applies.
 
 ```python3
-def max_profit(self, prices):
+def max_profit(prices):
     max_profit, min_price = 0, float('inf')
     for price in prices:
         min_price = min(min_price, price)
@@ -470,7 +470,7 @@ def max_profit(self, prices):
 Find the max path sum of a binary tree.
 
 ```
-def maxPathSum(self, root: TreeNode) -> int:
+def maxPathSum(root: TreeNode) -> int:
     max_path = float("-inf")
 
     def get_max_gain(node):
