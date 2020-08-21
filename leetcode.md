@@ -2,11 +2,6 @@
 
 ## 1. [Two Sum](https://leetcode.com/problems/two-sum)
 
-Given an array of ints, return indices of two numbers such that they add to the target number.
-
-Brute Force - 2 nested loops.
-Ideal - One-pass Hash Table, iterate the array while inserting elements into the table. The key being the number and it’s value the index.
-
 ```python3
 def two_sum(nums, target):
     dict = {}
@@ -456,16 +451,12 @@ def array_to_BST(nums):
 
 Recursively build the tree top-down. Time complexity O(n), space complexity O(n).
 
-## 121. Best Time to Buy and Sell Stock
+## 121. [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
 
-Given an array of stock prices on given days, with only one transaction on a single day, determine best price to first buy and sell a stock and return the max profit.
+Keep track of the minimum price and maximum profit found: if a new minimum price is found then calculate the running profits using that. The current minimum price will always yield the maximum profit for every stock price change after it, and if a new minimum is found the same rule applies.
 
-Brute force - loop through n^2 and find the max difference between every pair.
-Ideal - One-pass loop, keep track of the min_price and the max_profit found, if a new min_price is found calculate the max profit using that. It will work since the current min_price will always be the lowest point that yields the max_profit for every stock price after it, then if a new one is found the same rule applies.
-
-
-```
-def maxProfit(self, prices):
+```python3
+def max_profit(self, prices):
     max_profit, min_price = 0, float('inf')
     for price in prices:
         min_price = min(min_price, price)
@@ -473,7 +464,6 @@ def maxProfit(self, prices):
         max_profit = max(max_profit, profit)
     return max_profit
 ```
-
 
 ## 124. Binary Tree Maximum Path Sum
 
