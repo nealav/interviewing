@@ -45,6 +45,11 @@
 
 | Title           | Time            | Space           |
 |---------------- | --------------- | --------------- |
+[Reverse Bits](https://github.com/nealav/interviewing/blob/master/leetcode.md#190-reverse-bits) |  O(n)  | O(1) |
+[Missing Number](https://github.com/nealav/interviewing/blob/master/leetcode.md#268-missing-number) |  O(n)  | O(1) |
+[Counting Bits](https://github.com/nealav/interviewing/blob/master/leetcode.md#338-counting-bits) |  O(n)  | O(n) |
+[Number Of 1 Bits](https://github.com/nealav/interviewing/blob/master/leetcode.md#191-number-of-1-bits) |  O(n)  | O(1) |
+[Sum Of Two Integers](https://github.com/nealav/interviewing/blob/master/leetcode.md#371-sum-of-two-integers-without--or--) |  O(n)  | O(1) |
 
 ## Array
 
@@ -53,6 +58,12 @@
 [3 Sum](https://github.com/nealav/interviewing/blob/master/leetcode.md#15-3-sum) |  O(n^2)  | O(1) |
 [Product Of Array Except Self](https://github.com/nealav/interviewing/blob/master/leetcode.md#238-product-of-array-except-self) |  O(n)  | O(n) |
 [Contains Duplicate](https://github.com/nealav/interviewing/blob/master/leetcode.md#217-contains-duplicate) |  O(n)  | O(n) |
+[Container With Most Water](https://github.com/nealav/interviewing/blob/master/leetcode.md#11-container-with-most-water) |  O(n)  | O(1) |
+[Search In Rotated Sorted Array](https://github.com/nealav/interviewing/blob/master/leetcode.md#33-search-in-a-rotated-sorted-array) |  O(logn)  | O(1) |
+[Find Minimum In Rotated Sorted Array](https://github.com/nealav/interviewing/blob/master/leetcode.md#153-find-minimum-in-rotated-sorted-array) |  O(logn)  | O(1) |
+[Maximum Product Subarray](https://github.com/nealav/interviewing/blob/master/leetcode.md#152-maximum-product-subarray) |  O(n)  | O(n) |
+[Maximum Subarray](https://github.com/nealav/interviewing/blob/master/leetcode.md#53-maximum-subarray) |  O(n)  | O(1) |
+[Best Time To Buy And Sell Stock](https://github.com/nealav/interviewing/blob/master/leetcode.md#121-best-time-to-buy-and-sell-stock) |  O(n)  | O(1) |
 
 ## String
 
@@ -102,6 +113,7 @@
 
 | Title           | Time            | Space           |
 |---------------- | --------------- | --------------- |
+[Missing Number](https://github.com/nealav/interviewing/blob/master/leetcode.md#268-missing-number) |  O(n)  | O(1) |
 
 ## Two Pointers
 
@@ -122,6 +134,8 @@
 
 | Title           | Time            | Space           |
 |---------------- | --------------- | --------------- |
+[Search In Rotated Sorted Array](https://github.com/nealav/interviewing/blob/master/leetcode.md#33-search-in-a-rotated-sorted-array) |  O(logn)  | O(1) |
+[Find Minimum In Rotated Sorted Array](https://github.com/nealav/interviewing/blob/master/leetcode.md#153-find-minimum-in-rotated-sorted-array) |  O(logn)  | O(1) |
 
 ## Binary Search Tree
 
@@ -147,6 +161,8 @@
 
 | Title           | Time            | Space           |
 |---------------- | --------------- | --------------- |
+[Counting Bits](https://github.com/nealav/interviewing/blob/master/leetcode.md#338-counting-bits) |  O(n)  | O(n) |
+[Maximum Subarray](https://github.com/nealav/interviewing/blob/master/leetcode.md#53-maximum-subarray) |  O(n)  | O(1) |
 
 ## Greedy
 
