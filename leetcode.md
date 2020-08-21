@@ -108,9 +108,10 @@ def letter_combinations(digits):
 ## 18. [4 Sum](https://leetcode.com/problems/4sum/)
 
 * N Sum
+
 | Time    | Space    | Tags           |
 |-------- | -------- | -------------- |
-| O(n^k) | O(n) | Recursion
+O(n^k) | O(n) | Recursion |
 
 ```python3
 def four_sum(nums, target):
