@@ -264,6 +264,23 @@ def search(nums, target):
     return -1
 ```
 
+## 45. [Jump Game II](https://leetcode.com/problems/jump-game-ii/description/)
+
+| Time    | Space    | Tags           |
+|-------- | -------- | -------------- |
+O(n) | O(1) | Dynamic Programming |
+
+```python3
+def jump(nums):
+    jumps, edge, max_edge = 0, 0, 0
+    for i in range(len(nums)):
+        if i > edge:
+            edge = max_edge
+            jumps += 1
+        maxEdge = max(max+edge, i + nums[i])
+    return jumps
+```
+
 ## 46. [Permutations](https://leetcode.com/problems/permutations/)
 
 ```python3
@@ -300,6 +317,22 @@ def max_subarray(self, nums):
     return max(nums)
 ```
 
+## 55. [Jump Game](https://leetcode.com/problems/jump-game/)
+
+| Time    | Space    | Tags           |
+|-------- | -------- | -------------- |
+O(n) | O(1) | Dynamic Programming |
+
+```python3
+def can_jump(nums):
+    m = 0
+    for i, n in enumerate(nums):
+        if i > m:
+            return False
+        m = max(m, i+n)
+    return True
+```
+
 ## 56. Merge Intervals
 
 Given a collection of intervals, merge overlapping entries.
@@ -333,8 +366,28 @@ def climingStairs(n):
 
 ## 72. [Edit Distance](https://leetcode.com/problems/edit-distance/)
 
-```python3
+| Time    | Space    | Tags           |
+|-------- | -------- | -------------- |
+O(mn) | O(mn) | Dynamic Programming, [Levenshtein Distance](https://en.wikipedia.org/wiki/Levenshtein_distance) |
 
+```python3
+def min_distance(word1, word2):
+    m = len(word1)
+    n = len(word2)
+    table = [[0] * (n + 1) for _ in range(m + 1)]
+
+    for i in range(m + 1):
+        table[i][0] = i
+    for j in range(n + 1):
+        table[0][j] = j
+
+    for i in range(1, m + 1):
+        for j in range(1, n + 1):
+            if word1[i - 1] == word2[j - 1]:
+                table[i][j] = table[i - 1][j - 1]
+            else:
+                table[i][j] = 1 + min(table[i - 1][j], table[i][j - 1], table[i - 1][j - 1])
+    return table[-1][-1]
 ```
 
 ## 76. [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)
