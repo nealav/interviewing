@@ -26,27 +26,27 @@
 
 ## Bit Manupulation
 
-| Title           | Time            | Space           |
-|---------------- | --------------- | --------------- |
-[Reverse Bits](https://github.com/nealav/interviewing/blob/master/leetcode.md#190-reverse-bits) |  O(n)  | O(1) |
-[Missing Number](https://github.com/nealav/interviewing/blob/master/leetcode.md#268-missing-number) |  O(n)  | O(1) |
-[Counting Bits](https://github.com/nealav/interviewing/blob/master/leetcode.md#338-counting-bits) |  O(n)  | O(n) |
-[Number Of 1 Bits](https://github.com/nealav/interviewing/blob/master/leetcode.md#191-number-of-1-bits) |  O(n)  | O(1) |
-[Sum Of Two Integers](https://github.com/nealav/interviewing/blob/master/leetcode.md#371-sum-of-two-integers-without--or--) |  O(n)  | O(1) |
+| Title           |
+|---------------- |
+[Reverse Bits](https://github.com/nealav/interviewing/blob/master/leetcode.md#190-reverse-bits) |
+[Missing Number](https://github.com/nealav/interviewing/blob/master/leetcode.md#268-missing-number) |
+[Counting Bits](https://github.com/nealav/interviewing/blob/master/leetcode.md#338-counting-bits) |
+[Number Of 1 Bits](https://github.com/nealav/interviewing/blob/master/leetcode.md#191-number-of-1-bits) |
+[Sum Of Two Integers](https://github.com/nealav/interviewing/blob/master/leetcode.md#371-sum-of-two-integers-without--or--) |
 
 ## Array
 
-| Title           | Time            | Space           |
-|---------------- | --------------- | --------------- |
-[3 Sum](https://github.com/nealav/interviewing/blob/master/leetcode.md#15-3-sum) |  O(n^2)  | O(1) |
-[Product Of Array Except Self](https://github.com/nealav/interviewing/blob/master/leetcode.md#238-product-of-array-except-self) |  O(n)  | O(n) |
-[Contains Duplicate](https://github.com/nealav/interviewing/blob/master/leetcode.md#217-contains-duplicate) |  O(n)  | O(n) |
-[Container With Most Water](https://github.com/nealav/interviewing/blob/master/leetcode.md#11-container-with-most-water) |  O(n)  | O(1) |
-[Search In Rotated Sorted Array](https://github.com/nealav/interviewing/blob/master/leetcode.md#33-search-in-a-rotated-sorted-array) |  O(logn)  | O(1) |
-[Find Minimum In Rotated Sorted Array](https://github.com/nealav/interviewing/blob/master/leetcode.md#153-find-minimum-in-rotated-sorted-array) |  O(logn)  | O(1) |
-[Maximum Product Subarray](https://github.com/nealav/interviewing/blob/master/leetcode.md#152-maximum-product-subarray) |  O(n)  | O(n) |
-[Maximum Subarray](https://github.com/nealav/interviewing/blob/master/leetcode.md#53-maximum-subarray) |  O(n)  | O(1) |
-[Best Time To Buy And Sell Stock](https://github.com/nealav/interviewing/blob/master/leetcode.md#121-best-time-to-buy-and-sell-stock) |  O(n)  | O(1) |
+| Title           |
+|---------------- |
+[3 Sum](https://github.com/nealav/interviewing/blob/master/leetcode.md#15-3-sum) |
+[Product Of Array Except Self](https://github.com/nealav/interviewing/blob/master/leetcode.md#238-product-of-array-except-self) |
+[Contains Duplicate](https://github.com/nealav/interviewing/blob/master/leetcode.md#217-contains-duplicate) |
+[Container With Most Water](https://github.com/nealav/interviewing/blob/master/leetcode.md#11-container-with-most-water) |
+[Search In Rotated Sorted Array](https://github.com/nealav/interviewing/blob/master/leetcode.md#33-search-in-a-rotated-sorted-array) |
+[Find Minimum In Rotated Sorted Array](https://github.com/nealav/interviewing/blob/master/leetcode.md#153-find-minimum-in-rotated-sorted-array) |
+[Maximum Product Subarray](https://github.com/nealav/interviewing/blob/master/leetcode.md#152-maximum-product-subarray) |
+[Maximum Subarray](https://github.com/nealav/interviewing/blob/master/leetcode.md#53-maximum-subarray) |
+[Best Time To Buy And Sell Stock](https://github.com/nealav/interviewing/blob/master/leetcode.md#121-best-time-to-buy-and-sell-stock) |
 
 ## String
 
@@ -157,19 +157,45 @@
 | Title           | Time            | Space           |
 |---------------- | --------------- | --------------- |
 
-## Reference
+## Systems Design Reference
 
+* https://github.com/shashank88/system_design
+* https://github.com/donnemartin/system-design-primer
+* https://github.com/alex/what-happens-when
+* https://github.com/kilimchoi/engineering-blogs
+* https://github.com/vasanthk/how-web-works
+
+## Coding Interview Reference
+
+* https://github.com/search?o=desc&q=interview&s=stars&type=Repositories
 * https://github.com/kamyu104/LeetCode-Solutions
 * https://github.com/Garvit244/Leetcode
 * https://github.com/yangshun/front-end-interview-handbook
 * https://github.com/yangshun/tech-interview-handbook
 * https://github.com/donnemartin/interactive-coding-challenges
-* https://github.com/andreis/interview
-* https://github.com/chassing/linux-sysadmin-interview-questions
 * https://github.com/fishercoder1534/Leetcode
 * https://github.com/jwasham/coding-interview-university
-* https://github.com/shashank88/system_design
-* https://github.com/WebBreacher/offensiveinterview
-* https://github.com/donnemartin/system-design-primer
+* https://github.com/keon/algorithms
 * https://github.com/kdn251/interviews
 * https://github.com/labuladong/fucking-algorithm/tree/english
+* https://github.com/TheAlgorithms/Python
+* https://github.com/MaximAbramchuck/awesome-interview-questions
+* https://github.com/TSiege/Tech-Interview-Cheat-Sheet
+* https://github.com/chassing/linux-sysadmin-interview-questions
+* https://github.com/andreis/interview
+* https://github.com/kamranahmedse/design-patterns-for-humans
+* https://github.com/lnishan/awesome-competitive-programming
+* https://github.com/gibsjose/cpp-cheat-sheet
+* https://github.com/jlevy/the-art-of-command-line
+* https://github.com/vicky002/AlgoWiki/
+* https://github.com/EbookFoundation/free-programming-books/blob/master/problem-sets-competitive-programming.md
+
+## Security Reference
+
+* https://github.com/xapax/security
+* https://github.com/WebBreacher/offensiveinterview
+
+
+
+
+
