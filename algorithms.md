@@ -1,6 +1,6 @@
 # Algorithms
 
-* [Binary Search Tree](https://github.com/nealav/interviewing#binary-search-tree)
+* [Binary Search Tree](https://github.com/nealav/interviewing/blob/master/algorithms.md#binary-search-tree)
 
 ## Binary Search Tree
 
