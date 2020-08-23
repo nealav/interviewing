@@ -2,6 +2,10 @@
 
 ## 1. [Two Sum](https://leetcode.com/problems/two-sum)
 
+| Time    | Space    | Tags           |
+|-------- | -------- | -------------- |
+O(n) | O(n) | Hash Table, Two Pointer |
+
 ```python3
 def two_sum(nums, target):
     dict = {}
@@ -16,6 +20,10 @@ def two_sum(nums, target):
 ## 5. [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)
 
 Expand around the center, or [Manacher's Algorithm](https://en.wikipedia.org/wiki/Longest_palindromic_substring#Manacher's_algorithm).
+
+| Time    | Space    | Tags           |
+|-------- | -------- | -------------- |
+O(n^2) | O(1) | String |
 
 ```python3
 def longest_palindrome(s):
@@ -35,6 +43,9 @@ def helper(s, l, r):
 The brute-force algorithm finds all containers and their volumes in O(n^2).
 The ideal algorithm starts with the widest container, the container with the first and last lines. We cannot increase the width of this container to increase the volume therefore we need to increase the height. Removing the larger height candidate will not increase the height so we remove and move the smaller height candidate (either the left or right most).
 
+| Time    | Space    | Tags           |
+|-------- | -------- | -------------- |
+O(n) | O(1) | Two Pointer |
 
 ```python3
 def max_area(height):
@@ -333,22 +344,26 @@ def can_jump(nums):
     return True
 ```
 
-## 56. Merge Intervals
+## 56. [Merge Intervals](https://leetcode.com/problems/merge-intervals/)
 
-Given a collection of intervals, merge overlapping entries.
+| Time    | Space    | Tags           |
+|-------- | -------- | -------------- |
+O(nlogn) | O(n) | Sorting |
 
-```
+```python3
 def merge(intervals):
-    if len(intervals) == 0: return []
+    if len(intervals) == 0: 
+        return []
+    
     intervals = sorted(intervals, key = lambda x: x.start)
     res = [intervals[0]]
-    for n in intervals[1:]:
-        if n.start <= res[-1].end: res[-1].end = max(n.end, res[-1].end)
-        else: res.append(n)
+    for interval in intervals[1:]:
+        if interval.start <= res[-1].end:
+            res[-1].end = max(interval.end, res[-1].end)
+        else:
+            res.append(interval)
     return res
 ```
-
-Sort the list on starting points. Check if the new interval overlaps with the previous in the result list. If yes, update it to the end, otherwise append a new interval.
 
 ## 70. Climbing Stairs
 
@@ -451,7 +466,7 @@ def exist(board, word):
 
 Delete duplicates leaving only distinct numbers.
 
-```
+```python3
 def deleteDuplicates(self, head):
     dummy = pre = ListNode(0)
     dummy.next = head
@@ -470,7 +485,11 @@ def deleteDuplicates(self, head):
 
 ## 83. Remove Duplicates from Sorted Linked List
 
-```
+| Time    | Space    | Tags           |
+|-------- | -------- | -------------- |
+O(n) | O(1) | Linked List, Two Pointer |
+
+```python3
 def delete_duplicates(head):
     cur = head
     while cur:
@@ -480,23 +499,43 @@ def delete_duplicates(head):
     return head
 ```
 
+## 91. [Decode Ways]
 
-## 100. Same Tree
+| Time    | Space    | Tags           |
+|-------- | -------- | -------------- |
+O(n) | O(n) | Dynamic Programming |
 
-https://leetcode.com/problems/same-tree/solution/
-
-Recursively go down both trees and compare the nodes.
-
+```python3
+def num_decodings(s):
+    if not s or s[0] == '0':
+        return 0
+        
+    dp = [0 for x in range(len(s) + 1)] 
+    dp[0:2] = [1, 1]
+    for i in range(2, len(s) + 1): 
+        if 0 < int(s[i-1:i]):
+            dp[i] = dp[i - 1]
+        if 10 <= int(s[i-2:i]) <= 26:
+            dp[i] += dp[i - 2]
+    return dp[-1]
 ```
-def isSameTree(self, root):
+
+## 100. [Same Tree](https://leetcode.com/problems/same-tree/)
+
+| Time    | Space    | Tags           |
+|-------- | -------- | -------------- |
+O(n) | O(n) | Binary Search Tree |
+
+```python3
+def is_same_tree(root):
     if not p and not q:
         return True
     if not q or not p:
         return False
     if p.val != q.val:
         return False
-    return self.isSameTree(p.right, q.right) and \
-           self.isSameTree(p.left, q.left)    
+    return is_same_tree(p.right, q.right) and \
+           is_same_tree(p.left, q.left)    
 ```
 
 ## 101. [Symmetric Tree](https://leetcode.com/problems/symmetric-tree/)
@@ -510,28 +549,43 @@ def is_symmetric(root):
     return not root or mirror(root.left, root.right)
 ```
 
-## 104. Maximum Depth of a Binary Tree
+## 104. [Maximum Depth of a Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
 
-https://leetcode.com/problems/maximum-depth-of-binary-tree/
+| Time    | Space    | Tags           |
+|-------- | -------- | -------------- |
+O(n) | O(n) | Binary Search Tree, Recursion |
 
-Simply go down the tree recursively in both directions on every node. Every node will add the next node to the stack. O(n) as it traverses all nodes.
-
+```python3
+def max_depth(root):
+    return 1 + max(max_depth(root.left), max_depth(root.right)) if root else 0
 ```
-def maxDepth(self, root):
-    return 1 + max(self.maxDepth(root.left), self.maxDepth(root.right)) if root else 0
+
+## 105. [Construct Binary Tree From Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
+
+| Time    | Space    | Tags           |
+|-------- | -------- | -------------- |
+O(n) | O(n) | Binary Search Tree, Recursion |
+
+```python3
+def build_tree(preorder, inorder):
+    if inorder:
+        ind = inorder.index(preorder.pop(0))
+        root = TreeNode(inorder[ind])
+        root.left = build_tree(preorder, inorder[0:ind])
+        root.right = build_tree(preorder, inorder[ind+1:])
+        return root
 ```
 
 ## 108. Convert Sorted Array to BST
 
 Convert sorted array to height-balanced binary tree.
 
-```
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
-
+```python3
+class TreeNode:
+    def __init__(self, x):
+        self.val = x
+        self.left = None
+        self.right = None
 
 def array_to_BST(nums):
     if not nums: return None
@@ -846,6 +900,10 @@ def rob(nums):
 
 ## 206. [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)
 
+| Time    | Space    | Tags           |
+|-------- | -------- | -------------- |
+O(n) | O(1) | Linked List |
+
 ```python3
 def reverse_list(head):
     cur, prev = head, None
@@ -854,7 +912,64 @@ def reverse_list(head):
     return prev
 ```
 
+## 212. [Word Search II](https://leetcode.com/problems/word-search-ii/)
+
+| Time    | Space    | Tags           |
+|-------- | -------- | -------------- |
+O(M(4\*3^(L-1)) | O(N) | Trie, Depth First Search |
+
+```
+def findWords(board, words):
+    WORD_KEY = '$'
+    trie = {}
+    for word in words:
+        node = trie
+        for letter in word:
+            node = node.setdefault(letter, {})
+        node[WORD_KEY] = word
+
+    row_num = len(board)
+    col_num = len(board[0])
+
+    matched_words = []
+
+    def dfs(row, col, parent):    
+        letter = board[row][col]
+        current_node = parent[letter]
+
+        word_match = current_node.pop(WORD_KEY, False)
+        if word_match:
+            matched_words.append(word_match)
+
+        board[row][col] = '#'
+
+        for (row_offset, col_offset) in [(-1, 0), (0, 1), (1, 0), (0, -1)]:
+            new_row, new_col = row + row_offset, col + col_offset     
+            if new_row < 0 or new_row >= row_num or new_col < 0 or new_col >= col_num:
+                continue
+            if not board[new_row][new_col] in current_node:
+                continue
+            dfs(new_row, new_col, current_node)
+
+        board[row][col] = letter
+
+        if not curent_node:
+            parent.pop(letter)
+
+    for row in range(row_num):
+        for col in range(col_num):
+            if board[row][col] in trie:
+                dfs(row, col, trie)
+
+    return matched_words
+```
+
+
 ## 217. [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)
+
+| Time    | Space    | Tags           |
+|-------- | -------- | -------------- |
+O(n) | O(n) | Array, Set, Hash Table |
 
 ```python3
 def contains_duplicate(nums):
@@ -966,15 +1081,80 @@ class PeekingIterator(object):
         return self.temp is not None
 ```
 
+## 287. [Find The Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/)
+
+| Time    | Space    | Tags           |
+|-------- | -------- | -------------- |
+O(n) | O(1) | Array, Flyod's Cycle Detection, Binary Search |
+
+```python3
+def find_duplicate(nums):
+    for i in range(len(nums)):
+        if nums[abs(nums[i])] < 0:
+            return abs(nums[i])
+        else:
+            nums[abs(nums[i])] = nums[abs(nums[i])]*-1
+
+def find_duplicate(nums):
+    slow = len(nums) - 1
+    fast = len(nums) - 1
+    while True:
+        slow = nums[slow]
+        fast = nums[array[fast]]
+        if slow == fast:
+            break
+    
+    finder = len(nums) - 1
+    while True:
+        slow   = nums[slow]
+        finder = nums[finder]
+        if slow == finder:
+            return slow
+```
+
 ## 295. Find the Median From Data Stream
 
 https://leetcode.com/problems/find-median-from-data-stream/
 
 Simple sorting will be an O(nlogn) solution. Sort every time. Maintaining two heaps - one max and one min heap where each is maintained with equal sizes within 2 is the key to this problem.
 
-## 322. Coin Change
+## 322. [Coin Change](https://leetcode.com/problems/coin-change/)
 
-This problem can be broken down into subtracting a single coin from the current amount value and checking if the subtracted amount has a number of times associated with it for all the coins in the bank.
+| Time    | Space    | Tags           |
+|-------- | -------- | -------------- |
+O(n\*k) | O(k) | Dynamic Programming |
+
+```python3
+def coin_change(coins, amount):
+        dp = [0] + [float('inf') for i in range(amount)]
+        for i in range(1, amount + 1):
+            for coin in coins:
+                if i - coin >= 0:
+                    dp[i] = min(dp[i], dp[i - coin] + 1)
+        if dp[-1] == float('inf'):
+            return -1
+        return dp[-1]
+```
+
+## 331. [Verify Preorder Serialization Of A Binary Tree](https://leetcode.com/problems/verify-preorder-serialization-of-a-binary-tree/)
+
+| Time    | Space    | Tags           |
+|-------- | -------- | -------------- |
+O(n) | O(1) | Binary Search Tree |
+
+```python3
+    def is_valid_serialization(preorder):
+        p = preorder.split(',')
+        slot = 1
+        for node in p:
+            if slot == 0:
+                return False
+            if node == '#':
+                slot -= 1
+            else:
+                slot += 1
+        return slot == 0
+```
 
 
 ## 338. [Counting Bits](https://leetcode.com/problems/counting-bits/)
@@ -1043,7 +1223,9 @@ def reconstruct_queue(people):
 
 ## 424. [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/)
 
-Use a sliding window that keeps track of the count of the most unique character in the window.
+| Time    | Space    | Tags           |
+|-------- | -------- | -------------- |
+O(n) | O(n) | String, Sliding Window |
 
 ```python3
 def character_replacement(s, k):
@@ -1059,20 +1241,46 @@ def character_replacement(s, k):
     return result
 ```
 
+## 435. [Non-Overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/)
+
+| Time    | Space    | Tags           |
+|-------- | -------- | -------------- |
+O(nlogn) | O(1) | Greedy |
+
+```python3
+def erase_overlapping_intervals(intervals):
+    if not intervals: 
+        return 0
+    intervals.sort(key=lambda x: x.start)
+    running_end, erased = intervals[0].end, 0
+    for interval in intervals[1:]:
+        if interval.start < running_end:
+            erased += 1
+            running_end = min(running_end, interval.end)
+        else:
+            running_end = interval.end   # update end time
+    return erased
+```
+
+
 ## 438. Find All Anagrams in a String
 
-```
+| Time    | Space    | Tags           |
+|-------- | -------- | -------------- |
+O(n) | O(n) | String |
+
+```python3
 def find_anagrams(s, p):
     res = []
     pCounter = collections.Counter(p)
-    sCounter = collections.Counter(s[:len(p)-1])
-    for i in range(len(p)-1,len(s)):
+    sCounter = collections.Counter(s[:len(p) - 1])
+    for i in range(len(p) - 1, len(s)):
         sCounter[s[i]] += 1
         if sCounter == pCounter:
-            res.append(i-len(p)+1)
-        sCounter[s[i-len(p)+1]] -= 1
-        if sCounter[s[i-len(p)+1]] == 0:
-            del sCounter[s[i-len(p)+1]]
+            res.append(i - len(p) + 1)
+        sCounter[s[i - len(p) + 1]] -= 1
+        if sCounter[s[i - len(p) + 1]] == 0:
+            del sCounter[s[i - len(p) + 1]]
     return res
 ```
 
@@ -1158,6 +1366,10 @@ def find_unsorted_subarray(nums):
 
 ## 617. [Merge Two Binary Trees](https://leetcode.com/problems/merge-two-binary-trees/)
 
+| Time    | Space    | Tags           |
+|-------- | -------- | -------------- |
+O(n+m) | O(n+m) | Binary Search Tree, Recursion |
+
 ```python3
 def merge_trees(t1, t2):
     if t1 and t2:
@@ -1169,9 +1381,20 @@ def merge_trees(t1, t2):
         return t1 or t2
 ```
 
+## 621. [Task Scheduler](https://leetcode.com/problems/task-scheduler/)
+
+| Time    | Space    | Tags           |
+|-------- | -------- | -------------- |
+O() | O() | S |
+
+
+
+
 ## 647. [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/)
 
-Expand around the centers.
+| Time    | Space    | Tags           |
+|-------- | -------- | -------------- |
+O(n^2) | O(1) | String |
 
 ```python3
 def count_substrings(s):
