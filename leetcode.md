@@ -91,7 +91,7 @@ def three_sum(nums):
     return res
 ```
 
-## 17. Letter Combinations of Phone Number
+## 17. [Letter Combinations of Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/)
 
 | Time    | Space    | Tags           |
 |-------- | -------- | -------------- |
