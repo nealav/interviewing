@@ -19,11 +19,9 @@ def two_sum(nums, target):
 
 ## 5. [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)
 
-Expand around the center, or [Manacher's Algorithm](https://en.wikipedia.org/wiki/Longest_palindromic_substring#Manacher's_algorithm).
-
 | Time    | Space    | Tags           |
 |-------- | -------- | -------------- |
-O(n^2) | O(1) | String |
+O(n^2) | O(1) | String, [Manacher's Algorithm](https://en.wikipedia.org/wiki/Longest_palindromic_substring#Manacher's_algorithm) |
 
 ```python3
 def longest_palindrome(s):
@@ -65,6 +63,10 @@ def max_area(height):
 The brute-force algorithm is loops through each triplet. It is O(n^3).
 The ideal algorithm sorts the array, then for each element finds the matching 2 targets that complete the triplet. A left and right pointer at each of the array moves up and down respectively depending on whether the two-target sum is higher or lower than necessary.
 
+| Time    | Space    | Tags           |
+|-------- | -------- | -------------- |
+O(n^2) | O(1) | Sort, Two Pointer |
+
 ```python3
 def three_sum(nums):
     res = []
@@ -91,7 +93,9 @@ def three_sum(nums):
 
 ## 17. Letter Combinations of Phone Number
 
-Given a string of digits, return all possible letter combinations.
+| Time    | Space    | Tags           |
+|-------- | -------- | -------------- |
+O(n^2) | O(n) | Graph, BFS |
 
 ```python3
 def letter_combinations(digits):
@@ -369,7 +373,7 @@ def merge(intervals):
 
 There are two ways to reach the ith step, (1) by taking 2 steps from step ith-2 (2) by taking 1 step from step ith-1. Therefore by adding them we get the possibilities for reaching the ith step.
 
-```
+```python3
 def climingStairs(n):
     stairs = [0 for _ in range(n)]
     stairs[0] = 1
@@ -433,9 +437,7 @@ def min_window(s, t):
 
 ## 79. Word Search
 
-Given a 2D board, find if the word exists in the grid.
-
-```
+```python3
 def exist(board, word):
 
     def dfs(board, i, j, word):
@@ -616,9 +618,7 @@ def max_profit(prices):
 
 ## 124. Binary Tree Maximum Path Sum
 
-Find the max path sum of a binary tree.
-
-```
+```python3
 def maxPathSum(root: TreeNode) -> int:
     max_path = float("-inf")
 
@@ -695,9 +695,7 @@ def floyd_cycle_detection(head):
 
 ## 146. LRU Cache
 
-Design and implement a Least Recently Used cache. Support __get(key)__ and __put(key, val)__ in O(1).
-
-```
+```python3
 class LRUCache:
     def __init__(self, MSize):
         self.size = MSize
@@ -753,8 +751,6 @@ class LRUCache:
         if len(self.cache) > self.size:
             self.cache.popitem(last=False)
 ```
-
-The basic implementation of a cache relies on a data structure which uses an underlying hashtable.
 
 ## 152. [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/)
 
