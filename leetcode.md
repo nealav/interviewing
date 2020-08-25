@@ -95,7 +95,7 @@ def three_sum(nums):
 
 | Time    | Space    | Tags           |
 |-------- | -------- | -------------- |
-O(n^2) | O(n) | Graph, BFS |
+O(4^N) | O(4^N) | Graph, BFS |
 
 ```python3
 def letter_combinations(digits):
