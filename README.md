@@ -157,6 +157,31 @@
 | Title           | Time            | Space           |
 |---------------- | --------------- | --------------- |
 
+## Resources
+
+* [Big-O Algorithm Complexity Cheet Sheet](https://www.bigocheatsheet.com/)
+* [Hacking A Google Interview](http://courses.csail.mit.edu/iap/interview/materials.php)
+* [Competitive Programmer's Handbook, Antti Laaksonen](https://cses.fi/book/book.pdf)
+* [CTCI](http://www.crackingthecodinginterview.com/)
+* [EPI](https://elementsofprogramminginterviews.com/)
+* [Curated Top 100 LeetCode Questions](https://www.teamblind.com/post/New-Year-Gift---Curated-List-of-Top-100-LeetCode-Questions-to-Save-Your-Time-OaM1orEU)
+* [Bit Twiddling Hacks](https://graphics.stanford.edu/~seander/bithacks.html)
+
+## Competitive Programming Sites
+
+__A-tier.__ I consider A-tier sites to be ones that line up with the questions that are commonly asked and that you will see in interviews.
+* [LeetCode](https://leetcode.com/problemset/algorithms/)
+* [HackerRank](https://www.hackerrank.com/dashboard)
+* [GeeksForGeeks](https://www.geeksforgeeks.org/)
+
+__S-tier.__ Sites that have really hard questions or questions that most (99%) of interviews won't ask. If you are interested in actual competitive programming these are good. They will help with interviewing but are ultra-overkill and require some synaptic massaging to fit them into your interviewing knowledge bucket.
+* [SPOJ](https://www.spoj.com/problems/classical/)
+* [Project Euler](https://projecteuler.net/)
+* [Google Code Jam](https://codingcompetitions.withgoogle.com/codejam/archive)
+* [ACM-ICPC](https://icpc.global/worldfinals/problems)
+* [ICPC Kattis](https://icpc.kattis.com/)
+* [Open Kattis](https://open.kattis.com/)
+
 ## Systems Design Reference
 
 * https://github.com/shashank88/system_design
