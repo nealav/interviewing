@@ -50,8 +50,8 @@
 
 ## String
 
-| Title           | Time            | Space           |
-|---------------- | --------------- | --------------- |
+| Title           |
+|---------------- |
 [Longest Repeating Character Replacement](https://github.com/nealav/interviewing/blob/master/leetcode.md#424-longest-repeating-character-replacement) |  O(n)  | O(1) |
 [Minimum Window Substring](https://github.com/nealav/interviewing/blob/master/leetcode.md#76-minimum-window-substring) |  O(n)  | O(k) |
 [Longest Palindromic Substring](https://github.com/nealav/interviewing/blob/master/leetcode.md#5-longest-palindromic-substring) |  O(n^2)  | O(1) |
@@ -142,6 +142,8 @@
 
 ## Dynamic Programming
 
+| Title           |
+|---------------- |
 [Counting Bits](https://github.com/nealav/interviewing/blob/master/leetcode.md#338-counting-bits) |
 [Maximum Subarray](https://github.com/nealav/interviewing/blob/master/leetcode.md#53-maximum-subarray) |
 
