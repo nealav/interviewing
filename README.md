@@ -26,7 +26,7 @@
 
 ## Bit Manupulation
 
-| Title           |
+| Problem         |
 |---------------- |
 [Reverse Bits](https://github.com/nealav/interviewing/blob/master/leetcode.md#190-reverse-bits) |
 [Missing Number](https://github.com/nealav/interviewing/blob/master/leetcode.md#268-missing-number) |
@@ -36,7 +36,7 @@
 
 ## Array
 
-| Title           |
+| Problem         |
 |---------------- |
 [3 Sum](https://github.com/nealav/interviewing/blob/master/leetcode.md#15-3-sum) |
 [Product Of Array Except Self](https://github.com/nealav/interviewing/blob/master/leetcode.md#238-product-of-array-except-self) |
@@ -50,112 +50,112 @@
 
 ## String
 
-| Title           |
+| Problem         |
 |---------------- |
-[Longest Repeating Character Replacement](https://github.com/nealav/interviewing/blob/master/leetcode.md#424-longest-repeating-character-replacement) |  O(n)  | O(1) |
-[Minimum Window Substring](https://github.com/nealav/interviewing/blob/master/leetcode.md#76-minimum-window-substring) |  O(n)  | O(k) |
-[Longest Palindromic Substring](https://github.com/nealav/interviewing/blob/master/leetcode.md#5-longest-palindromic-substring) |  O(n^2)  | O(1) |
-[Group Anagrams](https://github.com/nealav/interviewing/blob/master/leetcode.md#49-group-anagrams) |  O(n\*klogk)  | O(n) |
-[Valid Palindrome](https://github.com/nealav/interviewing/blob/master/leetcode.md#125-valid-palindrome) |  O(n)  | O(1) |
-[Valid Anagram](https://github.com/nealav/interviewing/blob/master/leetcode.md#242-valid-anagram) |  O(nlogn)  | O(1) |
-[Palindromic Substrings](https://github.com/nealav/interviewing/blob/master/leetcode.md#647-palindromic-substrings) |  O(n^2)  | O(1) |
+[Longest Repeating Character Replacement](https://github.com/nealav/interviewing/blob/master/leetcode.md#424-longest-repeating-character-replacement) |
+[Minimum Window Substring](https://github.com/nealav/interviewing/blob/master/leetcode.md#76-minimum-window-substring) |
+[Longest Palindromic Substring](https://github.com/nealav/interviewing/blob/master/leetcode.md#5-longest-palindromic-substring) |
+[Group Anagrams](https://github.com/nealav/interviewing/blob/master/leetcode.md#49-group-anagrams) |
+[Valid Palindrome](https://github.com/nealav/interviewing/blob/master/leetcode.md#125-valid-palindrome) |
+[Valid Anagram](https://github.com/nealav/interviewing/blob/master/leetcode.md#242-valid-anagram) |
+[Palindromic Substrings](https://github.com/nealav/interviewing/blob/master/leetcode.md#647-palindromic-substrings) |
 
 ## Linked List
 
-| Title           | Time            | Space           |
-|---------------- | --------------- | --------------- |
+| Problem         |
+|---------------- |
 
 ## Stack
 
-| Title           | Time            | Space           |
-|---------------- | --------------- | --------------- |
-[Valid Parentheses](https://github.com/nealav/interviewing/blob/master/leetcode.md#20-valid-parentheses) |  O(n)  | O(n) |
+| Problem         |
+|---------------- |
+[Valid Parentheses](https://github.com/nealav/interviewing/blob/master/leetcode.md#20-valid-parentheses) |
 
 ## Queue
 
-| Title           | Time            | Space           |
-|---------------- | --------------- | --------------- |
+| Problem         |
+|---------------- |
 
 ## Heap
 
-| Title           | Time            | Space           |
-|---------------- | --------------- | --------------- |
+| Problem         |
+|---------------- |
 
 ## Tree
 
-| Title           | Time            | Space           |
-|---------------- | --------------- | --------------- |
+| Problem         |
+|---------------- |
 
 ## Hash Table
 
-| Title           | Time            | Space           |
-|---------------- | --------------- | --------------- |
-[Two Sum](https://github.com/nealav/interviewing/blob/master/leetcode.md#1-two-sum) |  O(n)  | O(n) |
+| Problem         |
+|---------------- |
+[Two Sum](https://github.com/nealav/interviewing/blob/master/leetcode.md#1-two-sum) |
 
 ## Math
 
-| Title           | Time            | Space           |
-|---------------- | --------------- | --------------- |
+| Problem         |
+|---------------- |
 [Missing Number](https://github.com/nealav/interviewing/blob/master/leetcode.md#268-missing-number) |  O(n)  | O(1) |
 
 ## Two Pointers
 
-| Title           | Time            | Space           |
-|---------------- | --------------- | --------------- |
+| Problem         |
+|---------------- |
 
 ## Sort
 
-| Title           | Time            | Space           |
-|---------------- | --------------- | --------------- |
+| Problem         |
+|---------------- |
 
 ## Recursion
 
-| Title           | Time            | Space           |
-|---------------- | --------------- | --------------- |
+| Problem         |
+|---------------- |
 
 ## Binary Search
 
-| Title           | Time            | Space           |
-|---------------- | --------------- | --------------- |
+| Problem         |
+|---------------- |
 [Search In Rotated Sorted Array](https://github.com/nealav/interviewing/blob/master/leetcode.md#33-search-in-a-rotated-sorted-array) |  O(logn)  | O(1) |
 [Find Minimum In Rotated Sorted Array](https://github.com/nealav/interviewing/blob/master/leetcode.md#153-find-minimum-in-rotated-sorted-array) |  O(logn)  | O(1) |
 
-## Binary Search Tree
+## [Binary Search Tree](https://github.com/nealav/interviewing/blob/master/algorithms.md#binary-search-tree)
 
-| Title           | Time            | Space           |
-|---------------- | --------------- | --------------- |
+| Problem         |
+|---------------- |
 
 ## Breadth-First Search
 
-| Title           | Time            | Space           |
-|---------------- | --------------- | --------------- |
+| Problem         |
+|---------------- |
 
 ## Depth-First Search
 
-| Title           | Time            | Space           |
-|---------------- | --------------- | --------------- |
+| Problem         |
+|---------------- |
 
 ## Back Tracking
 
-| Title           | Time            | Space           |
-|---------------- | --------------- | --------------- |
+| Problem         |
+|---------------- |
 
 ## Dynamic Programming
 
-| Title           |
+| Problem         |
 |---------------- |
 [Counting Bits](https://github.com/nealav/interviewing/blob/master/leetcode.md#338-counting-bits) |
 [Maximum Subarray](https://github.com/nealav/interviewing/blob/master/leetcode.md#53-maximum-subarray) |
 
 ## Greedy
 
-| Title           | Time            | Space           |
-|---------------- | --------------- | --------------- |
+| Problem         |
+|---------------- |
 
 ## Graph
 
-| Title           | Time            | Space           |
-|---------------- | --------------- | --------------- |
+| Problem         |
+|---------------- |
 
 ## Resources
 
