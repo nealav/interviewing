@@ -14,7 +14,7 @@ class Node:
         self.val = key
 ```
 
-## Inorder Traversal (Left, Root, Right)
+### Inorder Traversal (Left, Root, Right)
 
 ```python3
 def inorder(node):
@@ -24,7 +24,7 @@ def inorder(node):
         preorder(node.right)
 ```
 
-## Preorder Traversal (Root, Left, Right)
+### Preorder Traversal (Root, Left, Right)
 
 ```python3
 def preorder(node):
@@ -34,7 +34,7 @@ def preorder(node):
         preorder(node.right)
 ```
 
-## Postorder Traversal (Left, Right, Root)
+### Postorder Traversal (Left, Right, Root)
 
 ```python3
 def postorder(node):
@@ -44,7 +44,7 @@ def postorder(node):
         visit(node)
 ```
 
-## Level-Order Traversal
+### Level-Order Traversal
 
 ```python3
 def levelorder(node):
