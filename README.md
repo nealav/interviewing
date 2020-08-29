@@ -142,10 +142,8 @@
 
 ## Dynamic Programming
 
-| Title           | Time            | Space           |
-|---------------- | --------------- | --------------- |
-[Counting Bits](https://github.com/nealav/interviewing/blob/master/leetcode.md#338-counting-bits) |  O(n)  | O(n) |
-[Maximum Subarray](https://github.com/nealav/interviewing/blob/master/leetcode.md#53-maximum-subarray) |  O(n)  | O(1) |
+[Counting Bits](https://github.com/nealav/interviewing/blob/master/leetcode.md#338-counting-bits) |
+[Maximum Subarray](https://github.com/nealav/interviewing/blob/master/leetcode.md#53-maximum-subarray) |
 
 ## Greedy
 
