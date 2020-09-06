@@ -187,6 +187,17 @@ __Mock Interviews.__
 * [Gainlo](http://www.gainlo.co/)
 * [Pramp](https://www.pramp.com/)
 
+## Youtube
+
+* [Tushar Roy](https://www.youtube.com/user/tusharroy2525/featured)
+* [Back To Back SWE](https://www.youtube.com/channel/UCmJz2DV1a3yfgrR7GqRtUUA)
+* [Nick White](https://www.youtube.com/channel/UC1fLEeYICmo3O9cUsqIi7HA)
+* [Fisher Coder](https://www.youtube.com/FisherCoder)
+* [IDeserve](https://www.youtube.com/channel/UCMNkvKnD3mo3Jj9eTwJllWw)
+* [Errichto](https://www.youtube.com/channel/UCBr_Fu6q9iHYQCh13jmpbrg)
+* [Gaurav Sen](https://www.youtube.com/channel/UCRPMAqdtSgd0Ipeef7iFsKw)
+
+
 ## Systems Design Reference
 
 * https://github.com/shashank88/system_design
