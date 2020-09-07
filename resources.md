@@ -9,7 +9,7 @@
 * [Elements of Programming Interviews](https://elementsofprogramminginterviews.com/)
 * [Curated Top 100 LeetCode Questions](https://www.teamblind.com/post/New-Year-Gift---Curated-List-of-Top-100-LeetCode-Questions-to-Save-Your-Time-OaM1orEU)
 * [Bit Twiddling Hacks](https://graphics.stanford.edu/~seander/bithacks.html)
-* [30-mMinute Guide to Rocking Your Next Coding Interview](https://www.freecodecamp.org/news/coding-interviews-for-dummies-5e048933b82b/)
+* [30-Minute Guide to Rocking Your Next Coding Interview](https://www.freecodecamp.org/news/coding-interviews-for-dummies-5e048933b82b/)
 * [Maksim Noy, Interviews](http://maxnoy.com/interviews.html)
 * [Get That Job At Google](https://steve-yegge.blogspot.com/2008/03/get-that-job-at-google.html)
 * [Five Essential Phone Screen Questions](https://sites.google.com/site/steveyegge2/five-essential-phone-screen-questions)
