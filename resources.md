@@ -1,12 +1,23 @@
-## Resources
+# Resources
+
+## General
 
 * [Big-O Algorithm Complexity Cheet Sheet](https://www.bigocheatsheet.com/)
 * [Hacking A Google Interview](http://courses.csail.mit.edu/iap/interview/materials.php)
 * [Competitive Programmer's Handbook, Antti Laaksonen](https://cses.fi/book/book.pdf)
-* [CTCI](http://www.crackingthecodinginterview.com/)
-* [EPI](https://elementsofprogramminginterviews.com/)
+* [Cracking The Coding Interview](http://www.crackingthecodinginterview.com/)
+* [Elements of Programming Interviews](https://elementsofprogramminginterviews.com/)
 * [Curated Top 100 LeetCode Questions](https://www.teamblind.com/post/New-Year-Gift---Curated-List-of-Top-100-LeetCode-Questions-to-Save-Your-Time-OaM1orEU)
 * [Bit Twiddling Hacks](https://graphics.stanford.edu/~seander/bithacks.html)
+* [30-mMinute Guide to Rocking Your Next Coding Interview](https://www.freecodecamp.org/news/coding-interviews-for-dummies-5e048933b82b/)
+* [Maksim Noy, Interviews](http://maxnoy.com/interviews.html)
+* [Get That Job At Google](https://steve-yegge.blogspot.com/2008/03/get-that-job-at-google.html)
+* [Five Essential Phone Screen Questions](https://sites.google.com/site/steveyegge2/five-essential-phone-screen-questions)
+* [Topcoder Competitive Programming Tutorials](https://www.topcoder.com/community/competitive-programming/tutorials/)
+* [IOI Journal](https://ioinformatics.org/page/ioi-journal-contents/3)
+* [Where Can I Find Programming Puzzles and Challenges? - StackExchange](https://softwareengineering.stackexchange.com/questions/756/where-can-i-find-programming-puzzles-and-challenges)
+* [MathBlog](http://www.mathblog.dk/)
+
 
 ## Competitive Programming Sites
 
@@ -22,11 +33,29 @@ __S-tier.__ Sites that have really hard questions or questions that most (99%) o
 * [ACM-ICPC](https://icpc.global/worldfinals/problems)
 * [ICPC Kattis](https://icpc.kattis.com/)
 * [Open Kattis](https://open.kattis.com/)
+* [CSES Problem Set](https://cses.fi/problemset/text/1810)
+* [MAXimal](http://e-maxx.ru/)
+* [Timus Online Judge](https://acm.timus.ru/)
+* [IOI Probem Set](http://stats.ioinformatics.org/tasks/)
+* [IOI Contests](https://ioinformatics.org/page/contests/10)
+* [Online Judges List](https://arxiv.org/pdf/1710.05913.pdf)
+* [USACO Contests](http://www.usaco.org/index.php?page=open20results)
+* [H-99 Haskell Problems](https://wiki.haskell.org/H-99:_Ninety-Nine_Haskell_Problems)
+* [TopCoder](https://community.topcoder.com/tc?module=ProblemArchive&sr=151&er=200&sc=&sd=&class=&cat=&div1l=&div2l=&mind1s=&mind2s=&maxd1s=&maxd2s=&wr=)
+* [PEG Judge](https://wcipeg.com/problems/)
+* [ROSALIND](http://rosalind.info/problems/list-view/)
+* [Codeforces](https://codeforces.com/problemset)
 
 __Mock Interviews.__
 * [interviewing.io](https://interviewing.io/)
 * [Gainlo](http://www.gainlo.co/)
 * [Pramp](https://www.pramp.com/)
+
+## Math
+
+* [AoPS Contest Collection](https://artofproblemsolving.com/community/c13_contests)
+* [Putnam Competition](https://www.maa.org/math-competitions/putnam-competition)
+* [Bilkent University Math Problem of the Month](http://www.fen.bilkent.edu.tr/~cvmath/prob-month.html)
 
 ## Youtube
 
@@ -37,9 +66,9 @@ __Mock Interviews.__
 * [IDeserve](https://www.youtube.com/channel/UCMNkvKnD3mo3Jj9eTwJllWw)
 * [Errichto](https://www.youtube.com/channel/UCBr_Fu6q9iHYQCh13jmpbrg)
 * [Gaurav Sen](https://www.youtube.com/channel/UCRPMAqdtSgd0Ipeef7iFsKw)
+* [code_report](https://www.youtube.com/channel/UC1kBxkk2bcG78YBX7LMl9pQ)
 
-
-## Systems Design Reference
+## Systems Design
 
 * https://github.com/shashank88/system_design
 * https://github.com/donnemartin/system-design-primer
@@ -47,7 +76,7 @@ __Mock Interviews.__
 * https://github.com/kilimchoi/engineering-blogs
 * https://github.com/vasanthk/how-web-works
 
-## Coding Interview Reference
+## Coding Interview
 
 * https://github.com/search?o=desc&q=interview&s=stars&type=Repositories
 * https://github.com/kamyu104/LeetCode-Solutions
@@ -72,7 +101,7 @@ __Mock Interviews.__
 * https://github.com/vicky002/AlgoWiki/
 * https://github.com/EbookFoundation/free-programming-books/blob/master/problem-sets-competitive-programming.md
 
-## Security Reference
+## Security
 
 * https://github.com/xapax/security
 * https://github.com/WebBreacher/offensiveinterview
