@@ -14,6 +14,7 @@
 * [Get That Job At Google](https://steve-yegge.blogspot.com/2008/03/get-that-job-at-google.html)
 * [Five Essential Phone Screen Questions](https://sites.google.com/site/steveyegge2/five-essential-phone-screen-questions)
 * [Topcoder Competitive Programming Tutorials](https://www.topcoder.com/community/competitive-programming/tutorials/)
+* [Topcoder Competitive Programming Track](https://www.topcoder.com/thrive/tracks?track=Competitive%20Programming&tax=Tutorials)
 * [IOI Journal](https://ioinformatics.org/page/ioi-journal-contents/3)
 * [Where Can I Find Programming Puzzles and Challenges? - StackExchange](https://softwareengineering.stackexchange.com/questions/756/where-can-i-find-programming-puzzles-and-challenges)
 * [MathBlog](http://www.mathblog.dk/)
