@@ -38,12 +38,9 @@ def helper(s, l, r):
 
 ## 11. [Container With Most Water](https://leetcode.com/problems/container-with-most-water/)
 
-The brute-force algorithm finds all containers and their volumes in O(n^2).
-The ideal algorithm starts with the widest container, the container with the first and last lines. We cannot increase the width of this container to increase the volume therefore we need to increase the height. Removing the larger height candidate will not increase the height so we remove and move the smaller height candidate (either the left or right most).
-
 | Time    | Space    | Tags           |
 |-------- | -------- | -------------- |
-O(n) | O(1) | Two Pointer |
+| O(n) | O(1) | Two Pointer |
 
 ```python3
 def max_area(height):
@@ -60,12 +57,9 @@ def max_area(height):
 
 ## 15. [3 Sum](https://leetcode.com/problems/3sum/)
 
-The brute-force algorithm is loops through each triplet. It is O(n^3).
-The ideal algorithm sorts the array, then for each element finds the matching 2 targets that complete the triplet. A left and right pointer at each of the array moves up and down respectively depending on whether the two-target sum is higher or lower than necessary.
-
 | Time    | Space    | Tags           |
 |-------- | -------- | -------------- |
-O(n^2) | O(1) | Sort, Two Pointer |
+| O(n<sup>2</sup>) | O(1) | Sort, Two Pointer |
 
 ```python3
 def three_sum(nums):
@@ -126,7 +120,7 @@ def letter_combinations(digits):
 
 | Time    | Space    | Tags           |
 |-------- | -------- | -------------- |
-O(n^k) | O(n) | Recursion |
+| O(n<sup>k</sup>) | O(n) | Recursion, Sort |
 
 ```python3
 def four_sum(nums, target):
@@ -158,6 +152,10 @@ def four_sum(nums, target):
 
 ## 20. [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)
 
+| Time    | Space    | Tags           |
+|-------- | -------- | -------------- |
+| O(n) | O(n) | Stack |
+
 ```python3
 def valid_parentheses(s):
     stack = ['N']
@@ -173,7 +171,9 @@ def valid_parentheses(s):
 
 ## 21. [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)
 
-Loop through the lists iteratively, verifying their values and incrementing them forwards respectively. Weave them together.
+| Time    | Space    | Tags           |
+|-------- | -------- | -------------- |
+| O(n+m) | O(1) | Linked List |
 
 ```python3
 def merge_two_sorted_lists(l1, l2):
@@ -191,6 +191,10 @@ def merge_two_sorted_lists(l1, l2):
 ```
 
 ## 22. [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/)
+
+| Time    | Space    | Tags           |
+|-------- | -------- | -------------- |
+| O(2<sup>n</sup>) | O(n) | Recursion |
 
 ```python3
 def generate_parentheses(n):
@@ -229,21 +233,22 @@ def mergeKLists(self, lists: List[ListNode]) -> ListNode:
     return head.next   
 ```
 
-## 26. Remove Duplicates from Sorted Array
+## 26. [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
 
-In-place.
+| Time    | Space    | Tags           |
+|-------- | -------- | -------------- |
+| O(n) | O(1) | Array, Two Pointer |
 
 ```python3
-def removeDuplicates(self, A):
-    if not A:
+def remove_duplicates(nums):
+    if not nums:
         return 0
-
-    newTail = 0
+    new_tail = 0
     for i in range(1, len(A)):
-        if A[i] != A[newTail]:
-            newTail += 1
-            A[newTail] = A[i]
-    return newTail + 1
+        if A[i] != A[new_tail]:
+            new_tail += 1
+            A[new_tail] = A[i]
+    return new_tail + 1
 ```
 
 Maintain a tail to add numbers and skip over duplicates until you reach the next new number every time.
