@@ -2,7 +2,16 @@
 
 ## General
 
+* [Awesome Computer Science Opportunities](https://github.com/anu0012/awesome-computer-science-opportunities)
+
+__Data Structures & Algorithms.__
 * [Big-O Algorithm Complexity Cheet Sheet](https://www.bigocheatsheet.com/)
+* [Data Structure Visualization](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)
+* [PEG Algorithms Wiki](http://wcipeg.com/wiki/Special:AllPages)
+* [Algorithms Study Guide](https://workflowy.com/s/study-guide/RD5kZ682pWX5oxiE)
+* [Algorithms Mind Map](https://www.mindmeister.com/936304672/algorithms-data-structures-computer-science-math)
+
+__Competitive Programming.__
 * [Hacking A Google Interview](http://courses.csail.mit.edu/iap/interview/materials.php)
 * [Competitive Programmer's Handbook, Antti Laaksonen](https://cses.fi/book/book.pdf)
 * [Cracking The Coding Interview](http://www.crackingthecodinginterview.com/)
@@ -18,10 +27,7 @@
 * [IOI Journal](https://ioinformatics.org/page/ioi-journal-contents/3)
 * [Where Can I Find Programming Puzzles and Challenges? - StackExchange](https://softwareengineering.stackexchange.com/questions/756/where-can-i-find-programming-puzzles-and-challenges)
 * [MathBlog](http://www.mathblog.dk/)
-* [PEG Algorithms Wiki](http://wcipeg.com/wiki/Special:AllPages)
 * [When The Data Is Too Big To Fit Into Memory](http://homes.sice.indiana.edu/yye/lab/teaching/spring2014-C343/datatoobig.php)
-* [Algorithms Sutdy Guide](https://workflowy.com/s/study-guide/RD5kZ682pWX5oxiE)
-* [Algorithms Mind Map](https://www.mindmeister.com/936304672/algorithms-data-structures-computer-science-math)
 * [I'll Sleep When I'm Dead](https://docs.google.com/document/d/1VNoEUzBtyCw0fDw0X_bvuhmCwz1qhNjETPJc5VRZqm8/edit)
 * [USACO Math](https://github.com/bqi343/USACO/blob/master/Resources/Competition%20Math.md)
 * [USACO Guide](https://github.com/bqi343/USACO)
@@ -155,6 +161,7 @@ __Mock Interviews.__
 
 ## Security
 
+* [InfoSec Reference](https://github.com/rmusser01/Infosec_Reference)
 * https://github.com/xapax/security
 * https://github.com/WebBreacher/offensiveinterview
 * https://github.com/OWASP/CheatSheetSeries
