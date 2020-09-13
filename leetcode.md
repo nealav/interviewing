@@ -4,7 +4,7 @@
 
 | Time    | Space    | Tags           |
 |-------- | -------- | -------------- |
-O(n) | O(n) | Hash Table, Two Pointer |
+| O(n) | O(n) | Hash Table, Two Pointer |
 
 ```python3
 def two_sum(nums, target):
@@ -21,7 +21,7 @@ def two_sum(nums, target):
 
 | Time    | Space    | Tags           |
 |-------- | -------- | -------------- |
-O(n^2) | O(1) | String, [Manacher's Algorithm](https://en.wikipedia.org/wiki/Longest_palindromic_substring#Manacher's_algorithm) |
+| O(n<sup>2</sup>) | O(1) | String, [Manacher's Algorithm](https://en.wikipedia.org/wiki/Longest_palindromic_substring#Manacher's_algorithm) |
 
 ```python3
 def longest_palindrome(s):
@@ -95,7 +95,7 @@ def three_sum(nums):
 
 | Time    | Space    | Tags           |
 |-------- | -------- | -------------- |
-O(4^N) | O(4^N) | Graph, BFS |
+O(4<sup>n</sup>) | O(4<sup>n</sup>) | Graph, BFS |
 
 ```python3
 def letter_combinations(digits):
