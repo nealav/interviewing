@@ -18,6 +18,16 @@
 * [IOI Journal](https://ioinformatics.org/page/ioi-journal-contents/3)
 * [Where Can I Find Programming Puzzles and Challenges? - StackExchange](https://softwareengineering.stackexchange.com/questions/756/where-can-i-find-programming-puzzles-and-challenges)
 * [MathBlog](http://www.mathblog.dk/)
+* [PEG Algorithms Wiki](http://wcipeg.com/wiki/Special:AllPages)
+* [When The Data Is Too Big To Fit Into Memory](http://homes.sice.indiana.edu/yye/lab/teaching/spring2014-C343/datatoobig.php)
+* [Algorithms Sutdy Guide](https://workflowy.com/s/study-guide/RD5kZ682pWX5oxiE)
+* [Algorithms Mind Map](https://www.mindmeister.com/936304672/algorithms-data-structures-computer-science-math)
+* [I'll Sleep When I'm Dead](https://docs.google.com/document/d/1VNoEUzBtyCw0fDw0X_bvuhmCwz1qhNjETPJc5VRZqm8/edit)
+* [USACO Math](https://github.com/bqi343/USACO/blob/master/Resources/Competition%20Math.md)
+* [USACO Guide](https://github.com/bqi343/USACO)
+* [Ways To Practice Competitive Programming](https://drive.google.com/file/d/1J2x8pIYQ3MXANgvzOgBciWd3d79j_Exa/view)
+* [FAQ /r/LearnProgramming](https://www.reddit.com/r/learnprogramming/wiki/faq)
+* [FAQ /r/CSQ](https://www.reddit.com/r/cscareerquestions/wiki/index)
 
 
 ## Competitive Programming Sites
@@ -26,11 +36,18 @@ __A-tier.__ I consider A-tier sites to be ones that line up with the questions t
 * [LeetCode](https://leetcode.com/problemset/algorithms/)
 * [HackerRank](https://www.hackerrank.com/dashboard)
 * [GeeksForGeeks](https://www.geeksforgeeks.org/)
+* [TechieDelight](http://www.techiedelight.com/list-of-problems/)
+* [InterviewBit](https://www.interviewbit.com/)
+* [InterviewCake](https://www.interviewcake.com/)
+* [Coderbyte](https://www.coderbyte.com/challenges)
+* [CareerCup](https://www.careercup.com/page)
+* [CodeWars](https://www.codewars.com/kata/latest/my-languages)
+* [EdaBit](https://edabit.com/challenges)
 
 __S-tier.__ Sites that have really hard questions or questions that most (99%) of interviews won't ask. If you are interested in actual competitive programming these are good. They will help with interviewing but are ultra-overkill and require some synaptic massaging to fit them into your interviewing knowledge bucket.
 * [SPOJ](https://www.spoj.com/problems/classical/)
 * [Project Euler](https://projecteuler.net/)
-* [Google Code Jam](https://codingcompetitions.withgoogle.com/codejam/archive)
+* [Google Code Jam](https://codingcompetitions.withgoogle.com/codejam/archive), [Code Jam Solutions](https://www.go-hero.net/jam/08/solutions)
 * [ACM-ICPC](https://icpc.global/worldfinals/problems)
 * [ICPC Kattis](https://icpc.kattis.com/)
 * [Open Kattis](https://open.kattis.com/)
@@ -46,6 +63,14 @@ __S-tier.__ Sites that have really hard questions or questions that most (99%) o
 * [PEG Judge](https://wcipeg.com/problems/)
 * [ROSALIND](http://rosalind.info/problems/list-view/)
 * [Codeforces](https://codeforces.com/problemset)
+* [OnlineJudge](https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8)
+* [Programming Praxis](https://programmingpraxis.com/)
+* [CodeChef](https://www.codechef.com/)
+* [National Olympiads](http://olympiads.win.tue.nl/ioi/noi/index.html)
+* [Croation Open Competition in Informatics](https://hsin.hr/coci/)
+* [USACO Problems](https://usaco.guide/problems/)
+* [Yandex](https://contest.yandex.com/algorithm2017/)
+* [IPSC](https://ipsc.ksp.sk/2018/problems)
 
 __Mock Interviews.__
 * [interviewing.io](https://interviewing.io/)
@@ -57,6 +82,29 @@ __Mock Interviews.__
 * [AoPS Contest Collection](https://artofproblemsolving.com/community/c13_contests)
 * [Putnam Competition](https://www.maa.org/math-competitions/putnam-competition)
 * [Bilkent University Math Problem of the Month](http://www.fen.bilkent.edu.tr/~cvmath/prob-month.html)
+* [More Putnam](https://www.ocf.berkeley.edu/~wwu/riddles/putnam.shtml)
+
+## Reddit
+
+* https://www.reddit.com/r/cscareerquestions/comments/20ahfq/heres_a_pretty_big_list_of_programming_interview/
+* https://www.reddit.com/r/cscareerquestions/comments/2lzc4h/big_collection_of_interview_preparation_links/
+* https://www.reddit.com/r/cscareerquestions/comments/1jov24/heres_how_to_prepare_for_tech_interviews/
+* https://www.reddit.com/r/cscareerquestions/comments/n5spv/getting_a_job_in_software_development_a_reddit/
+* https://www.reddit.com/r/cscareerquestions/comments/cdp9yz/another_data_point_on_industry_hire_in_the_bay/
+* https://www.reddit.com/r/cscareerquestions/comments/e4v755/master_list_of_free_resources/
+* https://www.reddit.com/r/learnprogramming/comments/c37o7k/a_list_of_all_problem_solving_websites/
+* https://www.reddit.com/r/cscareerquestions/comments/1jov24/heres_how_to_prepare_for_tech_interviews/
+* https://www.reddit.com/r/cscareerquestions/comments/2lzc4h/big_collection_of_interview_preparation_links/?st=iq5sa4v6&sh=55ac1ed0
+* https://www.reddit.com/r/cscareerquestions/comments/3ivn86/official_guide_to_studying_for_technical/
+* https://www.reddit.com/r/cscareerquestions/comments/n5spv/getting_a_job_in_software_development_a_reddit/
+* https://www.reddit.com/r/cscareerquestions/comments/20ahfq/heres_a_pretty_big_list_of_programming_interview/
+
+## Other
+
+* [Sanfoundry](https://www.sanfoundry.com/)
+* [Exercism](https://exercism.io/tracks/python/exercises)
+* [CSAcademy](https://csacademy.com/contest/archive/tasks/)
+* [Rosetta Code](https://rosettacode.org/wiki/Rosetta_Code)
 
 ## Youtube
 
@@ -76,6 +124,7 @@ __Mock Interviews.__
 * https://github.com/alex/what-happens-when
 * https://github.com/kilimchoi/engineering-blogs
 * https://github.com/vasanthk/how-web-works
+* https://github.com/madd86/awesome-system-design
 
 ## Coding Interview
 
@@ -101,6 +150,8 @@ __Mock Interviews.__
 * https://github.com/jlevy/the-art-of-command-line
 * https://github.com/vicky002/AlgoWiki/
 * https://github.com/EbookFoundation/free-programming-books/blob/master/problem-sets-competitive-programming.md
+* https://github.com/h5bp/Front-end-Developer-Interview-Questions
+* https://github.com/nas5w/typeofnan-javascript-quizzes
 
 ## Security
 
