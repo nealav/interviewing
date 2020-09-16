@@ -341,7 +341,7 @@ def max_subarray(self, nums):
 
 | Time    | Space    | Tags           |
 |-------- | -------- | -------------- |
-O(n) | O(1) | Dynamic Programming |
+| O(n) | O(1) | Dynamic Programming |
 
 ```python3
 def can_jump(nums):
@@ -357,7 +357,7 @@ def can_jump(nums):
 
 | Time    | Space    | Tags           |
 |-------- | -------- | -------------- |
-O(nlogn) | O(n) | Sorting |
+| O(nlogn) | O(n) | Sorting |
 
 ```python3
 def merge(intervals):
@@ -374,12 +374,14 @@ def merge(intervals):
     return res
 ```
 
-## 70. Climbing Stairs
+## 70. [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)
 
-There are two ways to reach the ith step, (1) by taking 2 steps from step ith-2 (2) by taking 1 step from step ith-1. Therefore by adding them we get the possibilities for reaching the ith step.
+| Time    | Space    | Tags           |
+|-------- | -------- | -------------- |
+| O(nlogn) | O(n) | Dynamic Programming |
 
 ```python3
-def climingStairs(n):
+def climing_stairs(n):
     stairs = [0 for _ in range(n)]
     stairs[0] = 1
     stairs[1] = 2
@@ -392,7 +394,7 @@ def climingStairs(n):
 
 | Time    | Space    | Tags           |
 |-------- | -------- | -------------- |
-O(mn) | O(mn) | Dynamic Programming, [Levenshtein Distance](https://en.wikipedia.org/wiki/Levenshtein_distance) |
+| O(mn) | O(mn) | Dynamic Programming, [Levenshtein Distance](https://en.wikipedia.org/wiki/Levenshtein_distance) |
 
 ```python3
 def min_distance(word1, word2):
@@ -571,7 +573,7 @@ def max_depth(root):
 
 | Time    | Space    | Tags           |
 |-------- | -------- | -------------- |
-O(n) | O(n) | Binary Search Tree, Recursion |
+| O(n) | O(n) | Binary Search Tree, Recursion |
 
 ```python3
 def build_tree(preorder, inorder):
@@ -684,7 +686,29 @@ def single_number(nums):
     return n
 ```
 
+## 139. [Word Break](https://leetcode.com/problems/word-break/)
+
+| Time    | Space    | Tags           |
+|-------- | -------- | -------------- |
+| O(n<sup>3</sup>) | O(n) | Dynamic Programming, Breadth First Search |
+
+```python3
+def word_break(s, word_dict):
+    dp = [False] * (len(s) + 1)
+    dp[0] = True
+    for i in range(len(s)):
+        if dp[i]:
+            for j in range(i + 1, len(s) + 1):
+                if s[i:j] in word_dict:
+                    dp[j] = True     
+    return dp[-1]
+```
+
 ## 141. [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)
+
+| Time    | Space    | Tags           |
+|-------- | -------- | -------------- |
+| O(n) | O(n) | Linked List, Floyd's Cycle Detection, Tortoise and Hare |
 
 ```python3
 def floyd_cycle_detection(head): 
@@ -699,6 +723,10 @@ def floyd_cycle_detection(head):
 ```
 
 ## 146. LRU Cache
+
+| Time    | Space    | Tags           |
+|-------- | -------- | -------------- |
+| O(n) | O(n) | Data Structure |
 
 ```python3
 class LRUCache:
@@ -735,10 +763,9 @@ class LRUCache:
         self.append(key, value)
 ```
 
-A shorter version using OrderedDict
-
-```
+```python3
 from collections import OrderedDict
+
 class LRUCache:
     def __init__(self, Capacity):
         self.size = Capacity
@@ -1136,22 +1163,38 @@ https://leetcode.com/problems/find-median-from-data-stream/
 
 Simple sorting will be an O(nlogn) solution. Sort every time. Maintaining two heaps - one max and one min heap where each is maintained with equal sizes within 2 is the key to this problem.
 
+## 300. [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)
+
+| Time    | Space    | Tags           |
+|-------- | -------- | -------------- |
+| O(n<sup>2</sup>) | O(n) | Dynamic Programming, Binary Search |
+
+```python3
+def longest_increasing_subsequence(n):
+    dp = [1]*len(nums)
+    for i in range (1, len(nums)):
+        for j in range(i):
+            if nums[i] > nums[j]:
+                dp[i] = max(dp[i], dp[j]+1)
+    return max(dp)
+```
+
 ## 322. [Coin Change](https://leetcode.com/problems/coin-change/)
 
 | Time    | Space    | Tags           |
 |-------- | -------- | -------------- |
-O(n\*k) | O(k) | Dynamic Programming |
+| O(n\*k) | O(k) | Dynamic Programming |
 
 ```python3
 def coin_change(coins, amount):
-        dp = [0] + [float('inf') for i in range(amount)]
-        for i in range(1, amount + 1):
-            for coin in coins:
-                if i - coin >= 0:
-                    dp[i] = min(dp[i], dp[i - coin] + 1)
-        if dp[-1] == float('inf'):
-            return -1
-        return dp[-1]
+    dp = [0] + [float('inf') for i in range(amount)]
+    for i in range(1, amount + 1):
+        for coin in coins:
+            if i - coin >= 0:
+                dp[i] = min(dp[i], dp[i - coin] + 1)
+    if dp[-1] == float('inf'):
+        return -1
+    return dp[-1]
 ```
 
 ## 331. [Verify Preorder Serialization Of A Binary Tree](https://leetcode.com/problems/verify-preorder-serialization-of-a-binary-tree/)
