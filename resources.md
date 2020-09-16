@@ -111,6 +111,7 @@ __Mock Interviews.__
 * [Exercism](https://exercism.io/tracks/python/exercises)
 * [CSAcademy](https://csacademy.com/contest/archive/tasks/)
 * [Rosetta Code](https://rosettacode.org/wiki/Rosetta_Code)
+* [Educative](https://www.educative.io/)
 
 ## Youtube
 
