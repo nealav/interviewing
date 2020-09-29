@@ -30,37 +30,16 @@
 
 | Problem         |
 |---------------- |
-[Reverse Bits](https://github.com/nealav/interviewing/blob/master/leetcode.md#190-reverse-bits) |
-[Missing Number](https://github.com/nealav/interviewing/blob/master/leetcode.md#268-missing-number) |
-[Counting Bits](https://github.com/nealav/interviewing/blob/master/leetcode.md#338-counting-bits) |
-[Number Of 1 Bits](https://github.com/nealav/interviewing/blob/master/leetcode.md#191-number-of-1-bits) |
-[Sum Of Two Integers](https://github.com/nealav/interviewing/blob/master/leetcode.md#371-sum-of-two-integers-without--or--) |
 
 ## Array
 
 | Problem         |
 |---------------- |
-[3 Sum](https://github.com/nealav/interviewing/blob/master/leetcode.md#15-3-sum) |
-[Product Of Array Except Self](https://github.com/nealav/interviewing/blob/master/leetcode.md#238-product-of-array-except-self) |
-[Contains Duplicate](https://github.com/nealav/interviewing/blob/master/leetcode.md#217-contains-duplicate) |
-[Container With Most Water](https://github.com/nealav/interviewing/blob/master/leetcode.md#11-container-with-most-water) |
-[Search In Rotated Sorted Array](https://github.com/nealav/interviewing/blob/master/leetcode.md#33-search-in-a-rotated-sorted-array) |
-[Find Minimum In Rotated Sorted Array](https://github.com/nealav/interviewing/blob/master/leetcode.md#153-find-minimum-in-rotated-sorted-array) |
-[Maximum Product Subarray](https://github.com/nealav/interviewing/blob/master/leetcode.md#152-maximum-product-subarray) |
-[Maximum Subarray](https://github.com/nealav/interviewing/blob/master/leetcode.md#53-maximum-subarray) |
-[Best Time To Buy And Sell Stock](https://github.com/nealav/interviewing/blob/master/leetcode.md#121-best-time-to-buy-and-sell-stock) |
 
 ## String
 
 | Problem         |
 |---------------- |
-[Longest Repeating Character Replacement](https://github.com/nealav/interviewing/blob/master/leetcode.md#424-longest-repeating-character-replacement) |
-[Minimum Window Substring](https://github.com/nealav/interviewing/blob/master/leetcode.md#76-minimum-window-substring) |
-[Longest Palindromic Substring](https://github.com/nealav/interviewing/blob/master/leetcode.md#5-longest-palindromic-substring) |
-[Group Anagrams](https://github.com/nealav/interviewing/blob/master/leetcode.md#49-group-anagrams) |
-[Valid Palindrome](https://github.com/nealav/interviewing/blob/master/leetcode.md#125-valid-palindrome) |
-[Valid Anagram](https://github.com/nealav/interviewing/blob/master/leetcode.md#242-valid-anagram) |
-[Palindromic Substrings](https://github.com/nealav/interviewing/blob/master/leetcode.md#647-palindromic-substrings) |
 
 ## Linked List
 
@@ -71,7 +50,6 @@
 
 | Problem         |
 |---------------- |
-[Valid Parentheses](https://github.com/nealav/interviewing/blob/master/leetcode.md#20-valid-parentheses) |
 
 ## Queue
 
@@ -92,13 +70,11 @@
 
 | Problem         |
 |---------------- |
-[Two Sum](https://github.com/nealav/interviewing/blob/master/leetcode.md#1-two-sum) |
 
 ## Math
 
 | Problem         |
 |---------------- |
-[Missing Number](https://github.com/nealav/interviewing/blob/master/leetcode.md#268-missing-number) |  O(n)  | O(1) |
 
 ## Two Pointers
 
@@ -119,8 +95,6 @@
 
 | Problem         |
 |---------------- |
-[Search In Rotated Sorted Array](https://github.com/nealav/interviewing/blob/master/leetcode.md#33-search-in-a-rotated-sorted-array) |  O(logn)  | O(1) |
-[Find Minimum In Rotated Sorted Array](https://github.com/nealav/interviewing/blob/master/leetcode.md#153-find-minimum-in-rotated-sorted-array) |  O(logn)  | O(1) |
 
 ## [Binary Search Tree](https://github.com/nealav/interviewing/blob/master/algorithms.md#binary-search-tree)
 
@@ -146,8 +120,6 @@
 
 | Problem         |
 |---------------- |
-[Counting Bits](https://github.com/nealav/interviewing/blob/master/leetcode.md#338-counting-bits) |
-[Maximum Subarray](https://github.com/nealav/interviewing/blob/master/leetcode.md#53-maximum-subarray) |
 
 ## Greedy
 

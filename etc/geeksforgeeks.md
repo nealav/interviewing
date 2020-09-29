@@ -26,3 +26,19 @@ def findPos(a, key):
     return binary_search(a, l, h, key) 
 ```
 
+## [Delete Odd Nodes in Linked List](https://www.geeksforgeeks.org/delete-all-odd-or-even-positioned-nodes-from-circular-linked-list/)
+
+| Time    | Space    | Tags           |
+|-------- | -------- | -------------- |
+| O(N) | O(1) | Linked List |
+
+```python3
+def delete_odd_nodes(head):
+    head.next = head.next.next
+    temp = head.next
+    while temp != head and temp.next != head:
+        temp.next = temp.next.next
+        temp = temp.next
+    return head
+```
+
