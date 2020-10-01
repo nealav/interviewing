@@ -1,6 +1,6 @@
 # LeetCode 1 - 100
 
-## 1. [Two Sum](https://leetcode.com/problems/two-sum)
+## [1. Two Sum](https://leetcode.com/problems/two-sum)
 
 | Time    | Space    | Tags           |
 |-------- | -------- | -------------- |
@@ -62,7 +62,7 @@ def lengthOfLongestSubstring(s):
     return max_length
 ```
 
-## 5. [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)
+## [5. Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)
 
 | Time    | Space    | Tags           |
 |-------- | -------- | -------------- |
@@ -107,7 +107,7 @@ def convert(s, numRows):
     return ''.join(L)
 ```
 
-## 7. [Reverse Integer](https://leetcode.com/problems/reverse-integer/)
+## [7. Reverse Integer](https://leetcode.com/problems/reverse-integer/)
 
 | Time    | Space    | Tags           |
 |-------- | -------- | -------------- |
@@ -150,7 +150,7 @@ def atoi(s):
 ```
 
 
-## 9. [Palindrome Number](https://leetcode.com/problems/palindrome-number/)
+## [9. Palindrome Number](https://leetcode.com/problems/palindrome-number/)
 
 | Time    | Space    | Tags           |
 |-------- | -------- | -------------- |

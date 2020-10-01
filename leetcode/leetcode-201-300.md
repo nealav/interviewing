@@ -254,19 +254,21 @@ def rob(nums):
 
 | Time    | Space    | Tags           |
 |-------- | -------- | -------------- |
-O(n) | O(n) | Array, Set, Hash Table |
+| O(n) | O(n) | Array, Set, Hash Table |
 
 ```python3
 def contains_duplicate(nums):
     return len(nums) != len(set(nums))
 ```
 
-## 226. Invert Binary Tree
+## [226. Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/)
 
-https://leetcode.com/problems/invert-binary-tree/solution/
+| Time    | Space    | Tags           |
+|-------- | -------- | -------------- |
+| O(n) | O(1) | Tree |
 
 ```
-def invertTree(self, root):
+def invertTree(root):
     if root is None:
         return None
     root.left, root.right = \
@@ -416,6 +418,28 @@ def min_meeting_rooms(intervals):
     return min_meeting_rooms
 ```
 
+## [257. Binary Tree Paths](https://leetcode.com/problems/binary-tree-paths/)
+
+| Time    | Space    | Tags           |
+|-------- | -------- | -------------- |
+| O(N) | O(N) | Tree |
+
+```python3
+def binary_tree_paths(root):
+    if not root:
+        return []
+    paths, queue = [], collections.deque([(root, "")])
+    while queue:
+        node, ls = queue.popleft()
+        if not node.left and not node.right:
+            paths.append(ls + str(node.val))
+        if node.left:
+            queue.append((node.left, ls + str(node.val) + "->"))
+        if node.right:
+            queue.append((node.right, ls + str(node.val) + "->"))
+    return paths
+```
+
 ## 261. [Graph Valid Tree](https://leetcode.com/problems/graph-valid-tree/)
 
 | Time    | Space    | Tags           |
@@ -509,6 +533,21 @@ def alien_order(words):
     if len(output) < len(in_degree):
         return ""
     return "".join(output)
+```
+
+## [270. Closest Binary Search Tree Value](https://leetcode.com/problems/closest-binary-search-tree-value/)
+
+| Time    | Space    | Tags           |
+|-------- | -------- | -------------- |
+| O(H) | O(1) | Tree |
+
+```python3
+def closest_value(root, target):
+    closest = root.val
+    while root:
+        closest = min(root.val, closest, key = lambda x: abs(target - x))
+        root = root.left if target < root.val else root.right
+    return closest
 ```
 
 

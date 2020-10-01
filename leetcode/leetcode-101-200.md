@@ -251,6 +251,30 @@ def longest_consecutive(nums):
 ```
 
 
+## [129. Sum Root to Leaf Numbers](https://leetcode.com/problems/sum-root-to-leaf-numbers/)
+
+| Time    | Space    | Tags           |
+|-------- | -------- | -------------- |
+| O(N) | O(H) | Tree |
+
+```python3
+def sum_root_to_leaf(root):
+    root_to_leaf = 0
+    stack = [(root, 0) ]
+    
+    while stack:
+        root, curr_number = stack.pop()
+        if root is not None:
+            curr_number = curr_number * 10 + root.val
+            if root.left is None and root.right is None:
+                root_to_leaf += curr_number
+            else:
+                stack.append((root.right, curr_number))
+                stack.append((root.left, curr_number))
+                    
+    return root_to_leaf
+```
+
 ## 133. [Clone Graph](https://leetcode.com/problems/clone-graph/)
 
 | Time    | Space    | Tags           |
@@ -430,7 +454,7 @@ Say, we have a subarray A[i : j](i != 0, j != n) and the product of elements ins
 What if there are zeroes in the array? Well, we can split the array into several smaller ones. That's to say, when the prefix product is 0, we start over and compute prefix product from the current element instead. And this is exactly what A[i] *= (A[i - 1]) or 1 does.
 
 
-## 153. [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)
+## [153. Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)
 
 Modified binary search (Binary Select?) in the left and right trees in O(logn).
 
@@ -507,6 +531,29 @@ def get_intersection_node(headA, headB):
             A = A.next if A else headB
             B = B.next if B else headA
         return A
+```
+
+
+
+## [165. Compare Version Numbers](https://leetcode.com/problems/compare-version-numbers/)
+
+| Time    | Space    | Tags           |
+|-------- | -------- | -------------- |
+| O(N) | O(N) | String |
+
+```python3
+def compareVersion(version1, version2):
+    nums1 = version1.split('.')
+    nums2 = version2.split('.')
+    n1, n2 = len(nums1), len(nums2)
+    
+    for i in range(max(n1, n2)):
+        i1 = int(nums1[i]) if i < n1 else 0
+        i2 = int(nums2[i]) if i < n2 else 0
+        if i1 != i2:
+            return 1 if i1 > i2 else -1
+    
+    return 0 
 ```
 
 ## 167. [Two Sum II](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)

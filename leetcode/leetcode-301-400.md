@@ -153,3 +153,23 @@ def combination_sum(nums, target):
     return combs[target]
 ```
 
+
+
+## [383. Ransom Note](https://leetcode.com/problems/ransom-note/)
+
+| Time    | Space    | Tags           |
+|-------- | -------- | -------------- |
+| O(N) | O(N) | String |
+
+```python3
+def can_construct(ransomNote, magazine):
+    if len(ransomNote) > len(magazine): return False
+
+    letters = collections.Counter(magazine)
+
+    for c in ransomNote:
+        if letters[c] <= 0:
+            return False
+        letters[c] -= 1
+    return True
+```
